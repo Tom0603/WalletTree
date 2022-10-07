@@ -106,7 +106,11 @@ app.*.symbols
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
 
+
+
 # Backend related
+
+
 
 # Django #
 *.log
@@ -166,7 +170,6 @@ dist/
 downloads/ 
 eggs/ 
 .eggs/ 
-lib/ 
 lib64/ 
 parts/ 
 sdist/ 
