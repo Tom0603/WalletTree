@@ -19,21 +19,25 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                
+                /// Candlestick icon
+
                 const Icon(
-                    Icons.candlestick_chart_outlined,
-                    size: 140,
+                  Icons.candlestick_chart_outlined,
+                  size: 140,
                 ),
 
-                // Hello Text
-                Text(
+                /// Hello Text
+
+                const Text(
                   'Hello There!',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 36,
                   ),
                 ),
-                SizedBox(height: 25),
-                Text(
+                const SizedBox(height: 25),
+                const Text(
                   'Nice to see you here!',
                   style: TextStyle(
                     fontSize: 20,
@@ -41,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 120),
 
-                // Email input field
+                /// Email input field
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -65,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20,
                 ),
 
-                // Password input field
+                /// Password input field
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -88,8 +92,8 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 20,
                 ),
-                
-                // Sign in button
+
+                /// Sign in button
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -97,9 +101,10 @@ class _LoginPageState extends State<LoginPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()),
                       );
-                      },
+                    },
                     child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -120,11 +125,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 20),
 
-                // Not a member?
+                /// Not a member?
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'Not a Member?',
                       style: TextStyle(
