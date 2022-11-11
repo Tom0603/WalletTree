@@ -12,17 +12,17 @@ class OverviewGrid extends StatelessWidget {
       child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
-            color: Colors.deepPurple,
+            color: const Color.fromARGB(100, 32, 32, 32),
           ),
           child: Row(
             children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 20.0),
                   child: Text(
                     boxName,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.cyan,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/util/overview_grid.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,6 +15,11 @@ class _HomeScreenState extends State<HomeScreen> {
   final horizontalPadding = 40.0;
   final verticalPadding = 40.0;
 
+  // App Bar value
+  // TODO: add path to backend to keep value up to date
+
+  double netWorth = 17.839;
+
   List boxViews = [
     ["Daily"],
     ["Weekly"],
@@ -25,22 +31,29 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Overview"),
+        title: Text(
+            "Net worth: $netWorth€",
+          style: const TextStyle(
+            color: Colors.cyan,
+            fontWeight: FontWeight.bold
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
       ),
+      backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.all(30),
+              child: Text(
                 "Week Overview",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
-                  color: Colors.black54,
+                  color: Colors.cyan,
                 ),
               ),
             ),

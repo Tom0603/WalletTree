@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Icon(
                   Icons.candlestick_chart_outlined,
                   size: 140,
+                  color: Colors.cyan,
                 ),
 
                 /// Hello Text
@@ -34,6 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 36,
+                    color: Colors.cyan,
                   ),
                 ),
                 const SizedBox(height: 25),
@@ -41,6 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   'Nice to see you here!',
                   style: TextStyle(
                     fontSize: 20,
+                    color: Colors.cyan,
                   ),
                 ),
                 const SizedBox(height: 120),
@@ -51,8 +54,8 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        border: Border.all(color: Colors.deepPurple),
+                        color: const Color.fromARGB(100, 32, 32, 32),
+                        border: Border.all(color: Colors.cyan),
                         borderRadius: BorderRadius.circular(12)),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 20.0),
@@ -60,6 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
+                          hintStyle: TextStyle(color: Colors.cyan),
                         ),
                       ),
                     ),
@@ -75,8 +79,8 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        border: Border.all(color: Colors.deepPurple),
+                        color: const Color.fromARGB(100, 32, 32, 32),
+                        border: Border.all(color: Colors.cyan),
                         borderRadius: BorderRadius.circular(12)),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 20.0),
@@ -84,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Password",
+                          hintStyle: TextStyle(color: Colors.cyan),
                         ),
                       ),
                     ),
@@ -108,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          color: Colors.cyan,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: const Center(
@@ -129,14 +134,15 @@ class _LoginPageState extends State<LoginPage> {
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'Not a Member?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        color: Colors.grey[300]
                       ),
                     ),
-                    Text(
+                    const Text(
                       ' Register Now!',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.blue),
