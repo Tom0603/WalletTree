@@ -10,14 +10,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   // Padding constants
   final horizontalPadding = 40.0;
   final verticalPadding = 40.0;
 
   // App Bar value
   // TODO: add path to backend to keep value up to date
-
   double netWorth = 17.839;
 
   List boxViews = [
@@ -32,11 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            "Net worth: $netWorth€",
-          style: const TextStyle(
-            color: Colors.cyan,
-            fontWeight: FontWeight.bold
-          ),
+          "Net worth: $netWorth€",
+          style:
+              const TextStyle(color: Colors.cyan, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
@@ -57,7 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
 
             // grid
             Expanded(
@@ -66,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 physics: const NeverScrollableScrollPhysics(),
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 1,
                 ),
                 itemBuilder: (context, index) {
                   return OverviewGrid(

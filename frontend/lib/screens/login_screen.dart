@@ -1,42 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/home_screen.dart';
+import 'package:frontend/theme/custom_themes.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                
                 /// Candlestick icon
-
-                const Icon(
+                Icon(
                   Icons.candlestick_chart_outlined,
                   size: 140,
-                  color: Colors.cyan,
+                  color: Theme.of(context).iconTheme.color,
                 ),
 
                 /// Hello Text
-
-                const Text(
+                Text(
                   'Hello There!',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 36,
-                    color: Colors.cyan,
-                  ),
+                  style: Theme.of(context).textTheme.headline1,
                 ),
                 const SizedBox(height: 25),
                 const Text(
@@ -49,7 +43,6 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 120),
 
                 /// Email input field
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -74,7 +67,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 /// Password input field
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -99,7 +91,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 /// Sign in button
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: GestureDetector(
@@ -131,16 +122,13 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
 
                 /// Not a member?
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Not a Member?',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey[300]
-                      ),
+                          fontWeight: FontWeight.bold, color: Colors.grey[300]),
                     ),
                     const Text(
                       ' Register Now!',
