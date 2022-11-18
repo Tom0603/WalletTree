@@ -31,26 +31,21 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text(
           "Net worth: $netWorth€",
-          style:
-              const TextStyle(color: Colors.cyan, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      backgroundColor: const Color.fromARGB(1000, 32, 32, 32),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(30),
+            Padding(
+              padding: const EdgeInsets.all(30),
               child: Text(
                 "Week Overview",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  color: Colors.cyan,
-                ),
+                style: Theme.of(context).textTheme.headline5,
               ),
             ),
             const SizedBox(

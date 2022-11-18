@@ -30,15 +30,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 /// Hello Text
                 Text(
                   'Hello There!',
-                  style: Theme.of(context).textTheme.headline1,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
                 const SizedBox(height: 25),
-                const Text(
+                Text(
                   'Nice to see you here!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.cyan,
-                  ),
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 const SizedBox(height: 120),
 
@@ -47,16 +44,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(100, 32, 32, 32),
-                        border: Border.all(color: Colors.cyan),
+                        border: Border.all(
+                          color: Theme.of(context).primaryColor,
+                        ),
                         borderRadius: BorderRadius.circular(12)),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
-                          hintStyle: TextStyle(color: Colors.cyan),
+                          hintStyle:
+                              TextStyle(color: Theme.of(context).hintColor),
                         ),
                       ),
                     ),
@@ -71,16 +70,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(100, 32, 32, 32),
-                        border: Border.all(color: Colors.cyan),
+                        border:
+                            Border.all(color: Theme.of(context).primaryColor),
                         borderRadius: BorderRadius.circular(12)),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 20.0),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Password",
-                          hintStyle: TextStyle(color: Colors.cyan),
+                          hintStyle:
+                              TextStyle(color: Theme.of(context).hintColor),
                         ),
                       ),
                     ),
@@ -104,17 +104,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.cyan,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             'Sign in',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
+                            style: Theme.of(context).textTheme.subtitle1,
                           ),
                         )),
                   ),
@@ -127,13 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text(
                       'Not a Member?',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.grey[300]),
+                      style: Theme.of(context).textTheme.caption,
                     ),
-                    const Text(
+                    Text(
                       ' Register Now!',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.blue),
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption
+                          ?.copyWith(color: Colors.blue),
                     ),
                   ],
                 )

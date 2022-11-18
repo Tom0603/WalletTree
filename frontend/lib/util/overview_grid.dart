@@ -10,27 +10,26 @@ class OverviewGrid extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24),
-            color: const Color.fromARGB(100, 32, 32, 32),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(30.0, 100.0, 30.0, 20.0),
-                  child: Text(
-                    boxName,
-                    style: const TextStyle(
-                      color: Colors.cyan,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(24),
+          color: Theme.of(context).shadowColor,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Text(
+                  boxName,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
