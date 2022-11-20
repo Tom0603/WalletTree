@@ -10,12 +10,15 @@ const colorPrimaryLight = Colors.deepPurple;
 //const colorPrimaryLight = Colors.cyan;
 const colorBackgroundLight = Color(0xFFE0E0E0);
 const colorShadowLight = Colors.white24;
+const colorNavBarLight = Colors.black;
 
 /// Color constants for Dark Theme
 const colorPrimaryDark = Colors.cyan;
-const colorBackgroundDark = Color.fromARGB(100, 32, 32, 32);
+const colorBackgroundDark = Color.fromARGB(255, 32, 32, 32);
 const colorShadowDark = Colors.black12;
+const colorNavBarDark = Colors.white;
 
+/// Contains all the theming for LightTheme
 class CustomAppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
@@ -24,6 +27,11 @@ class CustomAppTheme {
       hintColor: colorGrey,
       shadowColor: colorShadowLight,
 
+      // Theming for Drawer
+      drawerTheme: const DrawerThemeData(
+        backgroundColor: colorBackgroundLight,
+      ),
+
       // Theming for AppBar
       appBarTheme: const AppBarTheme(
         backgroundColor: colorBackgroundLight,
@@ -31,7 +39,7 @@ class CustomAppTheme {
       ),
 
       // Theming for Icons
-      iconTheme: const IconThemeData(color: colorBlack),
+      iconTheme: const IconThemeData(color: colorPrimaryLight),
 
       // Theming for Text
       textTheme: const TextTheme(
@@ -64,7 +72,7 @@ class CustomAppTheme {
           fontFamily: "Proxima Nova",
           fontSize: 18,
           fontWeight: FontWeight.bold,
-          color: colorWhite,
+          color:  colorBlack,
         ),
         caption: TextStyle(
           fontFamily: "Proxima Nova",
@@ -77,12 +85,18 @@ class CustomAppTheme {
     );
   }
 
+  /// Contains all the theming for DarkTheme
   static ThemeData get darkTheme {
     return ThemeData(
       primaryColor: colorPrimaryDark,
       scaffoldBackgroundColor: colorBackgroundDark,
       hintColor: colorGrey,
       shadowColor: colorShadowDark,
+
+      // Theming for Drawer
+      drawerTheme: const DrawerThemeData(
+        backgroundColor: colorBackgroundDark,
+      ),
 
       // Theming for AppBar
       appBarTheme: const AppBarTheme(

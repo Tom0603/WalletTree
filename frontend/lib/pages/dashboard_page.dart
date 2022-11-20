@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/pages/components/sidebar.dart';
 import 'package:frontend/util/overview_grid.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class DashboardPage extends StatefulWidget {
+  const DashboardPage({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DashboardPage> createState() => _DashboardPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DashboardPageState extends State<DashboardPage> {
   // Padding constants
   final horizontalPadding = 40.0;
   final verticalPadding = 40.0;
@@ -37,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      /*
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,6 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      */
     );
   }
 }

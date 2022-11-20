@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/screens/home_screen.dart';
+import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
+import 'package:frontend/pages/dashboard_page.dart';
 import 'package:frontend/theme/custom_themes.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomeScreen()),
+                            builder: (context) => const DashboardBuilder()),
                       );
                     },
                     child: Container(
