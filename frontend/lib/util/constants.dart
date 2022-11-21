@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
-import 'package:frontend/pages/holdings_page.dart';
-import 'package:frontend/pages/analysis_page.dart';
-import 'package:frontend/pages/activities_page.dart';
-import 'package:frontend/pages/dividends_page.dart';
+import 'package:frontend/pages/builder_pages/holdings_builder.dart';
+import 'package:frontend/pages/builder_pages/analysis_builder.dart';
+import 'package:frontend/pages/builder_pages/activities_builder.dart';
+import 'package:frontend/pages/builder_pages/dividends_builder.dart';
 
 /// Includes all the pages for the SideBar/NavBar
 class PageList {
   static const dashboard = DashboardBuilder();
-  static const holdings = HoldingsPage();
-  static const analysis = AnalysisPage();
-  static const activities = ActivitiesPage();
-  static const dividends = DividendsPage();
+  static const holdings = HoldingsBuilder();
+  static const analysis = AnalysisBuilder();
+  static const activities = ActivitiesBuilder();
+  static const dividends = DividendsBuilder();
 }
 
 /// Includes all the icons for the SideBar/NavBar

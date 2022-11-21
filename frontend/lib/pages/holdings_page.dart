@@ -10,6 +10,15 @@ class HoldingsPage extends StatefulWidget {
 class _HoldingsPageState extends State<HoldingsPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Holdings",
+          style: Theme.of(context).textTheme.headline5,
+        ),
+        centerTitle: true,
+        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+      ),
+    );
   }
 }

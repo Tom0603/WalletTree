@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/components/sidebar.dart';
 import 'package:frontend/util/overview_grid.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
