@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+
 import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
-import 'package:frontend/pages/dashboard_page.dart';
-import 'package:frontend/theme/custom_themes.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

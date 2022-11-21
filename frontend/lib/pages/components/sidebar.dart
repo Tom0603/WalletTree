@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/dashboard_page.dart';
+
 import 'package:frontend/util/constants.dart';
 
 class SideBar extends StatelessWidget {
