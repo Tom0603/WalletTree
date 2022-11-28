@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/util/overview_grid.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -37,42 +35,6 @@ class _DashboardPageState extends State<DashboardPage> {
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      /*
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(30),
-              child: Text(
-                "Week Overview",
-                style: Theme.of(context).textTheme.headline5,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-
-            // grid
-            Expanded(
-              child: GridView.builder(
-                itemCount: 4,
-                physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
-                ),
-                itemBuilder: (context, index) {
-                  return OverviewGrid(
-                    boxName: boxViews[index][0],
-                  );
-                },
-              ),
-            )
-          ],
-        ),
-      ),
-      */
     );
   }
 }
