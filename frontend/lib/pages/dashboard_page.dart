@@ -16,12 +16,6 @@ class _DashboardPageState extends State<DashboardPage> {
   // TODO: add path to backend to keep value up to date
   double netWorth = 17.839;
 
-  List boxViews = [
-    ["Daily"],
-    ["Weekly"],
-    ["Monthly"],
-    ["Yearly"],
-  ];
 
   @override
   Widget build(BuildContext context) {
