@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
+import 'package:frontend/pages/components/login_ui_components/email_input_field.dart';
+import 'package:frontend/pages/components/login_ui_components/password_input_field.dart';
+import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
+import 'package:frontend/responsive/responsive.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -20,101 +22,53 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                /// Candlestick icon
-                Icon(
-                  Icons.candlestick_chart_outlined,
-                  size: 140,
-                  color: Theme.of(context).iconTheme.color,
-                ),
-
-                /// Hello Text
-                Text(
-                  'Hello There!',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-                const SizedBox(height: 25),
-                Text(
-                  'Nice to see you here!',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                const SizedBox(height: 120),
+                //const SizedBox(height: 120),
 
                 /// Email input field
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Email",
-                          hintStyle:
-                              TextStyle(color: Theme.of(context).hintColor),
-                        ),
-                      ),
-                    ),
+                if (Responsive.isMobile(context)) ...[
+                  const SizedBox(
+                    width: 300,
+                    child: EmailInputField(),
                   ),
-                ),
+                ] else ...[
+                  const SizedBox(
+                    width: 500,
+                    child: EmailInputField(),
+                  ),
+                ],
                 const SizedBox(
                   height: 20,
                 ),
 
                 /// Password input field
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border:
-                            Border.all(color: Theme.of(context).primaryColor),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Password",
-                          hintStyle:
-                              TextStyle(color: Theme.of(context).hintColor),
-                        ),
-                      ),
-                    ),
+                if (Responsive.isMobile(context)) ...[
+                  const SizedBox(
+                    width: 300,
+                    child: PasswordInputField(),
                   ),
-                ),
+                ] else ...[
+                  const SizedBox(
+                    width: 500,
+                    child: PasswordInputField(),
+                  ),
+                ],
                 const SizedBox(
                   height: 20,
                 ),
 
                 /// Sign in button
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DashboardBuilder()),
-                      );
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Sign in',
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                        )),
+                if (Responsive.isMobile(context)) ...[
+                  const SizedBox(
+                    width: 300,
+                    child: SignInButton(),
                   ),
-                ),
+                ] else ...[
+                  const SizedBox(
+                    width: 500,
+                    child: SignInButton(),
+                  ),
+                ],
+
                 const SizedBox(height: 20),
 
                 /// Not a member?

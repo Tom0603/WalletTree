@@ -47,6 +47,18 @@ class CustomAppTheme {
 
       // Theming for Text
       textTheme: const TextTheme(
+        headline1: TextStyle(
+          fontFamily: "Proxima  Nova",
+          fontSize: 96,
+          fontWeight: FontWeight.bold,
+          color: colorBlack,
+        ),
+        headline2: TextStyle(
+          fontFamily: "Proxima  Nova",
+          fontSize: 60,
+          fontWeight: FontWeight.bold,
+          color: colorBlack,
+        ),
         headline3: TextStyle(
           fontFamily: "Proxima  Nova",
           fontSize: 48,
@@ -113,6 +125,18 @@ class CustomAppTheme {
 
       // Theming for Text
       textTheme: const TextTheme(
+        headline1: TextStyle(
+          fontFamily: "Proxima  Nova",
+          fontSize: 96,
+          fontWeight: FontWeight.bold,
+          color: colorWhite,
+        ),
+        headline2: TextStyle(
+          fontFamily: "Proxima  Nova",
+          fontSize: 60,
+          fontWeight: FontWeight.bold,
+          color: colorWhite,
+        ),
         headline3: TextStyle(
           fontFamily: "Proxima  Nova",
           fontSize: 48,

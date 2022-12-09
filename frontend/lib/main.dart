@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/pages/builder_pages/login_builder.dart';
 
 import 'package:frontend/pages/login_page.dart';
 import 'package:frontend/theme/custom_themes.dart';
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: CustomAppTheme.lightTheme,
       darkTheme: CustomAppTheme.darkTheme,
-      themeMode: ThemeMode.light,
-      home: const LoginScreen(),
+      themeMode: ThemeMode.dark,
+      home: const LoginBuilder(),
     );
   }
 }
