@@ -14,8 +14,12 @@ class LoginBuilder extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (Responsive.isMobile(context)) ...[
-              const WelcomeComponent(),
-              const LoginScreen(),
+              Column(
+                children: const [
+                  WelcomeComponent(),
+                  LoginScreen(),
+                ],
+              ),
             ] else ...[
               const Expanded(
                 flex: 4,

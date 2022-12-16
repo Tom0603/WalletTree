@@ -22,12 +22,12 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                //const SizedBox(height: 120),
+                const SizedBox(height: 120),
 
                 /// Email input field
                 if (Responsive.isMobile(context)) ...[
                   const SizedBox(
-                    width: 300,
+                    width: 150,
                     child: EmailInputField(),
                   ),
                 ] else ...[
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 /// Password input field
                 if (Responsive.isMobile(context)) ...[
                   const SizedBox(
-                    width: 300,
+                    width: 150,
                     child: PasswordInputField(),
                   ),
                 ] else ...[
@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 /// Sign in button
                 if (Responsive.isMobile(context)) ...[
                   const SizedBox(
-                    width: 300,
+                    width: 150,
                     child: SignInButton(),
                   ),
                 ] else ...[

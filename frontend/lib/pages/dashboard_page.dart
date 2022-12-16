@@ -14,7 +14,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   // App Bar value
   // TODO: add path to backend to keep value up to date
-  double netWorth = 17.839;
+  double netWorth = 174.839;
 
 
   @override
