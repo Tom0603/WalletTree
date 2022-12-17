@@ -27,7 +27,10 @@ class LoginBuilder extends StatelessWidget {
               ),
               const Expanded(
                 flex: 3,
-                child: LoginScreen(),
+                child: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: LoginScreen(),
+                ),
               )
             ]
           ],
