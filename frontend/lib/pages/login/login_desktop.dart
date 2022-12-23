@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/components/login_ui_components/welcome_component.dart';
-import 'package:frontend/pages/login_page.dart';
+import 'package:frontend/pages/components/login_ui_components/desktop_login_component.dart';
 
 class DesktopLogin extends StatefulWidget {
   const DesktopLogin({Key? key}) : super(key: key);
@@ -26,7 +26,7 @@ class _DesktopLoginState extends State<DesktopLogin> {
               flex: 3,
               child: Padding(
                 padding: EdgeInsets.all(8.0),
-                child: LoginScreen(),
+                child: DesktopLoginSidePart(),
               ),
             )
           ],

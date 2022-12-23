@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:frontend/pages/components/login_ui_components/email_input_field.dart';
 import 'package:frontend/pages/components/login_ui_components/password_input_field.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
-import 'package:frontend/responsive/responsive.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class DesktopLoginSidePart extends StatefulWidget {
+  const DesktopLoginSidePart({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<DesktopLoginSidePart> createState() => _DesktopLoginSidePartState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,52 +22,34 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 120),
-
                 /// Email input field
-                if (Responsive.isMobile(context)) ...[
-                  const SizedBox(
-                    width: 150,
-                    child: EmailInputField(),
-                  ),
-                ] else ...[
-                  const SizedBox(
-                    width: 500,
-                    child: EmailInputField(),
-                  ),
-                ],
+
+                const SizedBox(
+                  width: 500,
+                  child: EmailInputField(),
+                ),
+
                 const SizedBox(
                   height: 20,
                 ),
 
                 /// Password input field
-                if (Responsive.isMobile(context)) ...[
-                  const SizedBox(
-                    width: 150,
-                    child: PasswordInputField(),
-                  ),
-                ] else ...[
-                  const SizedBox(
-                    width: 500,
-                    child: PasswordInputField(),
-                  ),
-                ],
+
+                const SizedBox(
+                  width: 500,
+                  child: PasswordInputField(),
+                ),
+
                 const SizedBox(
                   height: 20,
                 ),
 
                 /// Sign in button
-                if (Responsive.isMobile(context)) ...[
-                  const SizedBox(
-                    width: 150,
-                    child: SignInButton(),
-                  ),
-                ] else ...[
-                  const SizedBox(
-                    width: 500,
-                    child: SignInButton(),
-                  ),
-                ],
+
+                const SizedBox(
+                  width: 500,
+                  child: SignInButton(),
+                ),
 
                 const SizedBox(height: 20),
 

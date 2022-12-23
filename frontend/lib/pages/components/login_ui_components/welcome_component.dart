@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/responsive/responsive.dart';
 
 class WelcomeComponent extends StatelessWidget {
+  /// Welcome component including a candlestick chart icon and a welcome text
+
   const WelcomeComponent({Key? key}) : super(key: key);
 
   static double size = size;
@@ -37,7 +39,7 @@ class WelcomeComponent extends StatelessWidget {
   }
 
   getDevice(context) {
-    if (Responsive.isMobile(context)) {
+    if (Responsive.isDesktop(context) == false) {
       return size = 140;
     } else {
       return size = 240;
@@ -45,7 +47,7 @@ class WelcomeComponent extends StatelessWidget {
   }
 
   getHeadlineSize(context) {
-    if (Responsive.isMobile(context)) {
+    if (Responsive.isDesktop(context) == false) {
       return textSize = Theme.of(context).textTheme.headline3;
     } else {
       return textSize = Theme.of(context).textTheme.headline2;
