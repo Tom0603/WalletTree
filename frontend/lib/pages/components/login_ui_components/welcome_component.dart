@@ -5,7 +5,7 @@ import 'package:frontend/responsive/responsive.dart';
 class WelcomeComponent extends StatelessWidget {
   const WelcomeComponent({Key? key}) : super(key: key);
 
-  static int size = size;
+  static double size = size;
   static dynamic textSize = textSize;
 
   @override
