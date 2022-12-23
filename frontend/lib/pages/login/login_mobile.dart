@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/components/login_ui_components/email_input_field.dart';
 import 'package:frontend/pages/components/login_ui_components/password_input_field.dart';
+import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
 import 'package:frontend/pages/components/login_ui_components/welcome_component.dart';
 
@@ -40,13 +41,7 @@ class _MobileLoginState extends State<MobileLogin> {
                       'Not a Member?',
                       style: Theme.of(context).textTheme.caption,
                     ),
-                    Text(
-                      ' Register Now!',
-                      style: Theme.of(context)
-                          .textTheme
-                          .caption
-                          ?.copyWith(color: Colors.blue),
-                    ),
+                    const RegisterNowButton()
                   ],
                 )
               ],
