@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/login_page.dart';
+
+import 'package:frontend/pages/login_desktop.dart';
+import 'package:frontend/pages/login_mobile.dart';
 import 'package:frontend/responsive/responsive.dart';
-import 'package:frontend/pages/components/login_ui_components/welcome_component.dart';
 
 class LoginBuilder extends StatelessWidget {
   const LoginBuilder({Key? key}) : super(key: key);
@@ -9,33 +10,15 @@ class LoginBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (Responsive.isMobile(context)) ...[
-              Column(
-                children: const [
-                  WelcomeComponent(),
-                  LoginScreen(),
-                ],
-              ),
-            ] else ...[
-              const Expanded(
-                flex: 4,
-                child: WelcomeComponent(),
-              ),
-              const Expanded(
-                flex: 3,
-                child: Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: LoginScreen(),
-                ),
-              )
-            ]
-          ],
-        ),
-      ),
+      body: getLoginScreen(context),
     );
+  }
+
+  getLoginScreen(context) {
+    if (Responsive.isMobile(context)) {
+      return const MobileLogin();
+    } else {
+      return const DesktopLogin();
+    }
   }
 }

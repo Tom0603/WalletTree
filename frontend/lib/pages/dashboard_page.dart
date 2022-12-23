@@ -13,9 +13,7 @@ class _DashboardPageState extends State<DashboardPage> {
   final verticalPadding = 40.0;
 
   // App Bar value
-  // TODO: add path to backend to keep value up to date
   double netWorth = 174.839;
-
 
   @override
   Widget build(BuildContext context) {
