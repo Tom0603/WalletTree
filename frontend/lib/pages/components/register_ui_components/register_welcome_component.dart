@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:frontend/responsive/responsive.dart';
 
 class WelcomeComponent extends StatelessWidget {
-  /// Welcome component including a candlestick chart icon and a welcome text
 
   const WelcomeComponent({Key? key}) : super(key: key);
 
@@ -24,14 +23,14 @@ class WelcomeComponent extends StatelessWidget {
 
         /// Hello Text
         Text(
-          'Hello There!',
+          'Create New Account',
           style: getHeadlineSize(context),
         ),
 
         const SizedBox(height: 25),
 
         Text(
-          'Nice to see you here!',
+          'Thank you for choosing our services!',
           style: Theme.of(context).textTheme.headline6,
         ),
       ],
