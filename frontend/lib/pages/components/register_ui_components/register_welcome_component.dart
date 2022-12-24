@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/responsive/responsive.dart';
 
-class WelcomeComponent extends StatelessWidget {
-
-  const WelcomeComponent({Key? key}) : super(key: key);
+class RegisterWelcomeComponent extends StatelessWidget {
+  const RegisterWelcomeComponent({Key? key}) : super(key: key);
 
   static double size = size;
   static dynamic textSize = textSize;

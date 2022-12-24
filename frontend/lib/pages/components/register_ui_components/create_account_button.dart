@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
 
-class SignInButton extends StatelessWidget {
-  const SignInButton({Key? key}) : super(key: key);
+class CreateAccountButton extends StatelessWidget {
+  const CreateAccountButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class SignInButton extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Sign in',
+              'Create New Account',
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),

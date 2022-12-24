@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EmailRegisterField extends StatelessWidget {
-  const EmailRegisterField({Key? key}) : super(key: key);
+class PasswordRegisterField extends StatelessWidget {
+  const PasswordRegisterField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
