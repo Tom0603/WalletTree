@@ -65,6 +65,12 @@ class CustomAppTheme {
           fontWeight: FontWeight.bold,
           color: colorBlack,
         ),
+        headline4: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 34,
+          fontWeight: FontWeight.bold,
+          color: colorBlack,
+        ),
         headline5: TextStyle(
           fontFamily: "Proxima  Nova",
           fontSize: 24,
@@ -88,6 +94,7 @@ class CustomAppTheme {
           fontFamily: "Proxima Nova",
           fontSize: 18,
           fontWeight: FontWeight.bold,
+          letterSpacing: 0.5,
           color: colorBlack,
         ),
         caption: TextStyle(
@@ -143,6 +150,12 @@ class CustomAppTheme {
           fontWeight: FontWeight.bold,
           color: colorWhite,
         ),
+        headline4: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 34,
+          fontWeight: FontWeight.bold,
+          color: colorWhite,
+        ),
         headline5: TextStyle(
           fontFamily: "Proxima  Nova",
           fontSize: 24,
@@ -166,6 +179,7 @@ class CustomAppTheme {
           fontFamily: "Proxima Nova",
           fontSize: 18,
           fontWeight: FontWeight.bold,
+          letterSpacing: 0.5,
           color: colorWhite,
         ),
         caption: TextStyle(

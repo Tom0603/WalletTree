@@ -46,7 +46,7 @@ class RegisterWelcomeComponent extends StatelessWidget {
 
   getHeadlineSize(context) {
     if (Responsive.isDesktop(context) == false) {
-      return textSize = Theme.of(context).textTheme.headline3;
+      return textSize = Theme.of(context).textTheme.headline4;
     } else {
       return textSize = Theme.of(context).textTheme.headline2;
     }
