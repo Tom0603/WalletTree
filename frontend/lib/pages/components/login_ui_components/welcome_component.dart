@@ -12,29 +12,32 @@ class WelcomeComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        /// Candlestick icon
-        Icon(
-          Icons.candlestick_chart_outlined,
-          size: getIconSize(context),
-          color: Theme.of(context).iconTheme.color,
-        ),
+    return Center(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            /// Candlestick icon
+            Icon(
+              Icons.candlestick_chart_outlined,
+              size: getIconSize(context),
+              color: Theme.of(context).iconTheme.color,
+            ),
 
-        /// Hello Text
-        Text(
-          'Hello There!',
-          style: getHeadlineSize(context),
-        ),
+            /// Hello Text
+            Text(
+              'Hello There!',
+              style: getHeadlineSize(context),
+            ),
 
-        const SizedBox(height: 25),
+            const SizedBox(height: 25),
 
-        Text(
-          'Nice to see you here!',
-          style: Theme.of(context).textTheme.headline6,
+            Text(
+              'Nice to see you here!',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 

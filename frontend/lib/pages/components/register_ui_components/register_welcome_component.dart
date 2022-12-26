@@ -10,29 +10,33 @@ class RegisterWelcomeComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        /// Candlestick icon
-        Icon(
-          Icons.candlestick_chart_outlined,
-          size: getIconSize(context),
-          color: Theme.of(context).iconTheme.color,
-        ),
+    return Center(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            /// Candlestick icon
+            Icon(
+              Icons.candlestick_chart_outlined,
+              size: getIconSize(context),
+              color: Theme.of(context).iconTheme.color,
+            ),
 
-        /// Hello Text
-        Text(
-          'Create New Account',
-          style: getHeadlineSize(context),
-        ),
+            /// Hello Text
+            Text(
+              'Create New Account',
+              style: getHeadlineSize(context),
+            ),
 
-        const SizedBox(height: 25),
+            const SizedBox(height: 25),
 
-        Text(
-          'Thank you for choosing our services!',
-          style: Theme.of(context).textTheme.headline6,
+            Text(
+              'Thank you for choosing our services!',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 
