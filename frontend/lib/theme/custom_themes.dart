@@ -31,36 +31,36 @@ class CustomAppTheme {
       hintColor: colorGrey,
       shadowColor: colorShadowLight,
 
-      // Theming for Drawer
+      /// Theming for Drawer
       drawerTheme: const DrawerThemeData(
         backgroundColor: colorSideBarLight,
       ),
 
-      // Theming for AppBar
+      /// Theming for AppBar
       appBarTheme: const AppBarTheme(
         backgroundColor: colorSideBarLight,
         centerTitle: true,
       ),
 
-      // Theming for Icons
+      /// Theming for Icons
       iconTheme: const IconThemeData(color: colorPrimaryLight),
 
-      // Theming for Text
+      /// Theming for Text
       textTheme: const TextTheme(
         headline1: TextStyle(
-          fontFamily: "Proxima  Nova",
+          fontFamily: "Proxima Nova",
           fontSize: 96,
           fontWeight: FontWeight.bold,
           color: colorBlack,
         ),
         headline2: TextStyle(
-          fontFamily: "Proxima  Nova",
+          fontFamily: "Proxima Nova",
           fontSize: 60,
           fontWeight: FontWeight.bold,
           color: colorBlack,
         ),
         headline3: TextStyle(
-          fontFamily: "Proxima  Nova",
+          fontFamily: "Proxima Nova",
           fontSize: 48,
           fontWeight: FontWeight.bold,
           color: colorBlack,
@@ -72,7 +72,7 @@ class CustomAppTheme {
           color: colorBlack,
         ),
         headline5: TextStyle(
-          fontFamily: "Proxima  Nova",
+          fontFamily: "Proxima Nova",
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: colorPrimaryLight,
@@ -116,21 +116,21 @@ class CustomAppTheme {
       hintColor: colorGrey,
       shadowColor: colorShadowDark,
 
-      // Theming for Drawer
+      /// Theming for Drawer
       drawerTheme: const DrawerThemeData(
         backgroundColor: colorSideBarDark,
       ),
 
-      // Theming for AppBar
+      /// Theming for AppBar
       appBarTheme: const AppBarTheme(
         backgroundColor: colorSideBarDark,
         centerTitle: true,
       ),
 
-      // Theming for Icons
+      /// Theming for Icons
       iconTheme: const IconThemeData(color: colorPrimaryDark),
 
-      // Theming for Text
+      /// Theming for Text
       textTheme: const TextTheme(
         headline1: TextStyle(
           fontFamily: "Proxima  Nova",

@@ -6,6 +6,8 @@ import 'package:frontend/pages/components/register_ui_components/name_register_f
 import 'package:frontend/pages/components/register_ui_components/password_register_field.dart';
 import 'package:frontend/pages/components/register_ui_components/register_welcome_component.dart';
 
+import '../components/register_ui_components/register_sign_in_button.dart';
+
 class MobileRegister extends StatefulWidget {
   const MobileRegister({Key? key}) : super(key: key);
 
@@ -23,16 +25,29 @@ class _MobileRegisterState extends State<MobileRegister> {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                RegisterWelcomeComponent(),
-                SizedBox(height: 120),
-                NameInputField(),
-                SizedBox(height: 20),
-                EmailRegisterField(),
-                SizedBox(height: 20),
-                PasswordRegisterField(),
-                SizedBox(height: 20),
-                CreateAccountButton(),
+              children: [
+                const RegisterWelcomeComponent(),
+                const SizedBox(height: 120),
+                const NameInputField(),
+                const SizedBox(height: 20),
+                const EmailRegisterField(),
+                const SizedBox(height: 20),
+                const PasswordRegisterField(),
+                const SizedBox(height: 20),
+                const CreateAccountButton(),
+                const SizedBox(height: 20),
+
+                /// Have an account?
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Already have an Account?',
+                      style: Theme.of(context).textTheme.caption,
+                    ),
+                    const RegisterSignInButton(),
+                  ],
+                ),
               ],
             ),
           ),

@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'package:frontend/pages/components/login_ui_components/email_input_field.dart';
-import 'package:frontend/pages/components/login_ui_components/password_input_field.dart';
-import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
-import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
+import 'package:frontend/pages/components/register_ui_components/create_account_button.dart';
+import 'package:frontend/pages/components/register_ui_components/email_register_field.dart';
+import 'package:frontend/pages/components/register_ui_components/name_register_field.dart';
+import 'package:frontend/pages/components/register_ui_components/password_register_field.dart';
+import 'package:frontend/pages/components/register_ui_components/register_sign_in_button.dart';
 
-class DesktopLoginSidePart extends StatefulWidget {
-  const DesktopLoginSidePart({Key? key}) : super(key: key);
+class DesktopRegisterSidePart extends StatefulWidget {
+  const DesktopRegisterSidePart({Key? key}) : super(key: key);
 
   @override
-  State<DesktopLoginSidePart> createState() => _DesktopLoginSidePartState();
+  State<DesktopRegisterSidePart> createState() =>
+      _DesktopRegisterSidePartState();
 }
 
-class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
+class _DesktopRegisterSidePartState extends State<DesktopRegisterSidePart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +25,20 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                /// Name input field
+                const SizedBox(
+                  width: 500,
+                  child: NameInputField(),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
                 /// Email input field
                 const SizedBox(
                   width: 500,
-                  child: EmailInputField(),
+                  child: EmailRegisterField(),
                 ),
 
                 const SizedBox(
@@ -36,7 +48,7 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
                 /// Password input field
                 const SizedBox(
                   width: 500,
-                  child: PasswordInputField(),
+                  child: PasswordRegisterField(),
                 ),
 
                 const SizedBox(
@@ -46,7 +58,7 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
                 /// Sign in button
                 const SizedBox(
                   width: 500,
-                  child: SignInButton(),
+                  child: CreateAccountButton(),
                 ),
 
                 const SizedBox(height: 20),
@@ -56,10 +68,10 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a Member?',
+                      'Already have an Account?',
                       style: Theme.of(context).textTheme.caption,
                     ),
-                    const RegisterNowButton()
+                    const RegisterSignInButton()
                   ],
                 )
               ],
