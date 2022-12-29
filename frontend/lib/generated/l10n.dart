@@ -60,6 +60,66 @@ class S {
     );
   }
 
+  /// `Email`
+  String get hintEmail {
+    return Intl.message(
+      'Email',
+      name: 'hintEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get hintPassword {
+    return Intl.message(
+      'Password',
+      name: 'hintPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not a Member?`
+  String get promptMember {
+    return Intl.message(
+      'Not a Member?',
+      name: 'promptMember',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Register Now!`
+  String get registerNow {
+    return Intl.message(
+      ' Register Now!',
+      name: 'registerNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hello There!`
+  String get loginGreeting {
+    return Intl.message(
+      'Hello There!',
+      name: 'loginGreeting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nice to see you here!`
+  String get loginSubtext {
+    return Intl.message(
+      'Nice to see you here!',
+      name: 'loginSubtext',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Dashboard`
   String get dashboard {
     return Intl.message(

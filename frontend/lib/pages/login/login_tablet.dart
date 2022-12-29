@@ -6,6 +6,8 @@ import 'package:frontend/pages/components/login_ui_components/register_now_butto
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
 import 'package:frontend/pages/components/login_ui_components/welcome_component.dart';
 
+import '../../generated/l10n.dart';
+
 class TabletLogin extends StatefulWidget {
   const TabletLogin({Key? key}) : super(key: key);
 
@@ -59,7 +61,7 @@ class _TabletLoginState extends State<TabletLogin> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a Member?',
+                      S.of(context).promptMember,
                       style: Theme.of(context).textTheme.caption,
                     ),
                     const RegisterNowButton()

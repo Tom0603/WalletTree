@@ -2,6 +2,14 @@
   "@@locale": "en",
 
   "loginButton": "Sign In",
+  "hintEmail": "Email",
+  "hintPassword": "Password",
+
+  "promptMember": "Not a Member?",
+  "registerNow": " Register Now!",
+
+  "loginGreeting": "Hello There!",
+  "loginSubtext": "Nice to see you here!",
 
   "dashboard": "Dashboard",
   "holdings": "Holdings",

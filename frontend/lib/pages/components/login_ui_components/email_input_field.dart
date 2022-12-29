@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../generated/l10n.dart';
+
 class EmailInputField extends StatelessWidget {
   const EmailInputField({
     Key? key,
@@ -19,7 +21,7 @@ class EmailInputField extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: "Email",
+              hintText: S.of(context).hintEmail,
               hintStyle: TextStyle(color: Theme.of(context).hintColor),
             ),
           ),

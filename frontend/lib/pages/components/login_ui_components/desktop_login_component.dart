@@ -5,6 +5,8 @@ import 'package:frontend/pages/components/login_ui_components/password_input_fie
 import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
 
+import '../../../generated/l10n.dart';
+
 class DesktopLoginSidePart extends StatefulWidget {
   const DesktopLoginSidePart({Key? key}) : super(key: key);
 
@@ -56,7 +58,7 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a Member?',
+                      S.of(context).promptMember,
                       style: Theme.of(context).textTheme.caption,
                     ),
                     const RegisterNowButton()

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../generated/l10n.dart';
+
 class PasswordInputField extends StatelessWidget {
   const PasswordInputField({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class PasswordInputField extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: "Password",
+              hintText: S.of(context).hintPassword,
               hintStyle: TextStyle(color: Theme.of(context).hintColor),
             ),
           ),

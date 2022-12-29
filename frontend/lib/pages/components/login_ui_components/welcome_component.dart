@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/responsive/responsive.dart';
 
+import '../../../generated/l10n.dart';
+
 class WelcomeComponent extends StatelessWidget {
   /// Welcome component including a candlestick chart icon and a welcome text
 
@@ -23,16 +25,17 @@ class WelcomeComponent extends StatelessWidget {
               color: Theme.of(context).iconTheme.color,
             ),
 
-            /// Hello Text
+            /// Login Greeting
             Text(
-              'Hello There!',
+              S.of(context).loginGreeting,
               style: getHeadlineSize(context),
             ),
 
             const SizedBox(height: 25),
 
+            /// Login Subtext
             Text(
-              'Nice to see you here!',
+              S.of(context).loginSubtext,
               style: Theme.of(context).textTheme.headline6,
             ),
           ],
@@ -42,7 +45,7 @@ class WelcomeComponent extends StatelessWidget {
   }
 
   getIconSize(context) {
-    if (Responsive.isDesktop(context) == false) {
+    if (!Responsive.isDesktop(context)) {
       return size = 140;
     } else {
       return size = 240;
@@ -50,7 +53,7 @@ class WelcomeComponent extends StatelessWidget {
   }
 
   getHeadlineSize(context) {
-    if (Responsive.isDesktop(context) == false) {
+    if (!Responsive.isDesktop(context)) {
       return textSize = Theme.of(context).textTheme.headline3;
     } else {
       return textSize = Theme.of(context).textTheme.headline2;

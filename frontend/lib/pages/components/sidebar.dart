@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/util/constants.dart';
 
-import '../../generated/l10n.dart';
+import 'package:frontend/generated/l10n.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({Key? key}) : super(key: key);

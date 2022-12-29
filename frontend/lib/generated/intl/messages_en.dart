@@ -26,7 +26,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "analysis": MessageLookupByLibrary.simpleMessage("Analysis"),
         "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
         "dividends": MessageLookupByLibrary.simpleMessage("Dividends"),
+        "hintEmail": MessageLookupByLibrary.simpleMessage("Email"),
+        "hintPassword": MessageLookupByLibrary.simpleMessage("Password"),
         "holdings": MessageLookupByLibrary.simpleMessage("Holdings"),
-        "loginButton": MessageLookupByLibrary.simpleMessage("Sign In")
+        "loginButton": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "loginGreeting": MessageLookupByLibrary.simpleMessage("Hello There!"),
+        "loginSubtext":
+            MessageLookupByLibrary.simpleMessage("Nice to see you here!"),
+        "promptMember": MessageLookupByLibrary.simpleMessage("Not a Member?"),
+        "registerNow": MessageLookupByLibrary.simpleMessage(" Register Now!")
       };
 }
