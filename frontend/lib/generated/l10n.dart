@@ -59,6 +59,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Dashboard`
+  String get dashboard {
+    return Intl.message(
+      'Dashboard',
+      name: 'dashboard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Holdings`
+  String get holdings {
+    return Intl.message(
+      'Holdings',
+      name: 'holdings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Analysis`
+  String get analysis {
+    return Intl.message(
+      'Analysis',
+      name: 'analysis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities`
+  String get activities {
+    return Intl.message(
+      'Activities',
+      name: 'activities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dividends`
+  String get dividends {
+    return Intl.message(
+      'Dividends',
+      name: 'dividends',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

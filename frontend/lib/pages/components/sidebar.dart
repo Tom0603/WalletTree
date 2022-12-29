@@ -2,43 +2,47 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/util/constants.dart';
 
+import '../../generated/l10n.dart';
+
 class SideBar extends StatelessWidget {
   const SideBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    S localeStrings = S.of(context);
+
     return Drawer(
       backgroundColor: Theme.of(context).drawerTheme.backgroundColor,
       child: ListView(
-        children: const [
-          DrawerHeader(
+        children: [
+          const DrawerHeader(
             child: Icon(
               Icons.candlestick_chart_outlined,
               size: 100,
             ),
           ),
           DrawerListTile(
-            title: "Dashboard",
+            title: localeStrings.dashboard,
             icon: IconsList.dashboardIcon,
             page: PageList.dashboard,
           ),
           DrawerListTile(
-            title: "Holdings",
+            title: localeStrings.holdings,
             icon: IconsList.holdingsIcon,
             page: PageList.holdings,
           ),
           DrawerListTile(
-            title: "Analysis",
+            title: localeStrings.analysis,
             icon: IconsList.analysisIcon,
             page: PageList.analysis,
           ),
           DrawerListTile(
-            title: "Activities",
+            title: localeStrings.activities,
             icon: IconsList.activitiesIcon,
             page: PageList.activities,
           ),
           DrawerListTile(
-            title: "Dividends",
+            title: localeStrings.dividends,
             icon: IconsList.dividendsIcon,
             page: PageList.dividends,
           ),
@@ -57,8 +61,8 @@ class DrawerListTile extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final dynamic icon;
-  final dynamic page;
+  final IconData icon;
+  final Widget page;
 
   @override
   Widget build(BuildContext context) {

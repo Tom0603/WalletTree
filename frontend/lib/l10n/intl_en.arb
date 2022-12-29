@@ -1,4 +1,11 @@
 {
   "@@locale": "en",
-  "loginButton": "Sign In"
+
+  "loginButton": "Sign In",
+
+  "dashboard": "Dashboard",
+  "holdings": "Holdings",
+  "analysis": "Analysis",
+  "activities": "Activities",
+  "dividends": "Dividends"
 }
