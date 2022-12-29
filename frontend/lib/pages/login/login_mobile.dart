@@ -5,8 +5,7 @@ import 'package:frontend/pages/components/login_ui_components/password_input_fie
 import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
 import 'package:frontend/pages/components/login_ui_components/welcome_component.dart';
-
-import '../../generated/l10n.dart';
+import '../components/login_ui_components/prompt_member_component.dart';
 
 class MobileLogin extends StatefulWidget {
   const MobileLogin({Key? key}) : super(key: key);
@@ -38,12 +37,9 @@ class _MobileLoginState extends State<MobileLogin> {
                 /// Not a member?
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      S.of(context).promptMember,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
-                    const RegisterNowButton()
+                  children: const [
+                    PromptMember(),
+                    RegisterNowButton(),
                   ],
                 )
               ],

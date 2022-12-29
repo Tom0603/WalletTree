@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/components/login_ui_components/email_input_field.dart';
 import 'package:frontend/pages/components/login_ui_components/password_input_field.dart';
+import 'package:frontend/pages/components/login_ui_components/prompt_member_component.dart';
 import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
-
-import '../../../generated/l10n.dart';
 
 class DesktopLoginSidePart extends StatefulWidget {
   const DesktopLoginSidePart({Key? key}) : super(key: key);
@@ -56,12 +55,9 @@ class _DesktopLoginSidePartState extends State<DesktopLoginSidePart> {
                 /// Not a member?
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      S.of(context).promptMember,
-                      style: Theme.of(context).textTheme.caption,
-                    ),
-                    const RegisterNowButton()
+                  children: const [
+                    PromptMember(),
+                    RegisterNowButton(),
                   ],
                 )
               ],
