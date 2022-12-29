@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../generated/l10n.dart';
+
 class PasswordRegisterField extends StatelessWidget {
   const PasswordRegisterField({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class PasswordRegisterField extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: "Password",
+              hintText: S.of(context).hintPassword,
               hintStyle: TextStyle(color: Theme.of(context).hintColor),
             ),
           ),

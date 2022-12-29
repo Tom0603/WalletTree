@@ -11,6 +11,17 @@
   "loginGreeting": "Hello There!",
   "loginSubtext": "Nice to see you here!",
 
+
+  "createAccountButton": "Create New Account",
+  "hintName": "Name",
+
+  "promptAccount": "Already have an Account?",
+  "registerSignIn": "Sign In!",
+
+  "registerGreeting": "Create New Account",
+  "registerSubtext": "Thank you for choosing our services!",
+
+
   "dashboard": "Dashboard",
   "holdings": "Holdings",
   "analysis": "Analysis",

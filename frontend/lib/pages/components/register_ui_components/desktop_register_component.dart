@@ -6,6 +6,8 @@ import 'package:frontend/pages/components/register_ui_components/name_register_f
 import 'package:frontend/pages/components/register_ui_components/password_register_field.dart';
 import 'package:frontend/pages/components/register_ui_components/register_sign_in_button.dart';
 
+import '../../../generated/l10n.dart';
+
 class DesktopRegisterSidePart extends StatefulWidget {
   const DesktopRegisterSidePart({Key? key}) : super(key: key);
 
@@ -68,7 +70,7 @@ class _DesktopRegisterSidePartState extends State<DesktopRegisterSidePart> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Already have an Account?',
+                      S.of(context).promptAccount,
                       style: Theme.of(context).textTheme.caption,
                     ),
                     const RegisterSignInButton()

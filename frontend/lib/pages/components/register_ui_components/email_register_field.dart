@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../generated/l10n.dart';
+
 class EmailRegisterField extends StatelessWidget {
   const EmailRegisterField({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class EmailRegisterField extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: "Email",
+              hintText: S.of(context).hintEmail,
               hintStyle: TextStyle(color: Theme.of(context).hintColor),
             ),
           ),

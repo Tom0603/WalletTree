@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/responsive/responsive.dart';
 
+import '../../../generated/l10n.dart';
+
 class RegisterWelcomeComponent extends StatelessWidget {
   const RegisterWelcomeComponent({Key? key}) : super(key: key);
 
@@ -22,16 +24,17 @@ class RegisterWelcomeComponent extends StatelessWidget {
               color: Theme.of(context).iconTheme.color,
             ),
 
-            /// Hello Text
+            /// Register Greeting
             Text(
-              'Create New Account',
+              S.of(context).registerGreeting,
               style: getHeadlineSize(context),
             ),
 
             const SizedBox(height: 25),
 
+            /// Register Subtext
             Text(
-              'Thank you for choosing our services!',
+              S.of(context).registerSubtext,
               style: Theme.of(context).textTheme.headline6,
             ),
           ],

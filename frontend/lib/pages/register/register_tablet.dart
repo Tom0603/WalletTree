@@ -7,6 +7,8 @@ import 'package:frontend/pages/components/register_ui_components/register_sign_i
 import 'package:frontend/pages/components/register_ui_components/register_welcome_component.dart';
 import 'package:frontend/pages/components/register_ui_components/email_register_field.dart';
 
+import '../../generated/l10n.dart';
+
 class TabletRegister extends StatefulWidget {
   const TabletRegister({Key? key}) : super(key: key);
 
@@ -69,7 +71,7 @@ class _TabletRegisterState extends State<TabletRegister> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Already have an Account?',
+                      S.of(context).promptAccount,
                       style: Theme.of(context).textTheme.caption,
                     ),
                     const RegisterSignInButton(),

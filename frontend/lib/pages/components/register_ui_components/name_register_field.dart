@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../generated/l10n.dart';
+
 class NameInputField extends StatelessWidget {
   const NameInputField({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class NameInputField extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: "Name",
+              hintText: S.of(context).hintName,
               hintStyle: TextStyle(color: Theme.of(context).hintColor),
             ),
           ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
 
+import '../../../generated/l10n.dart';
+
 class CreateAccountButton extends StatelessWidget {
   const CreateAccountButton({Key? key}) : super(key: key);
 
@@ -24,7 +26,7 @@ class CreateAccountButton extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Create New Account',
+              S.of(context).createAccountButton,
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),

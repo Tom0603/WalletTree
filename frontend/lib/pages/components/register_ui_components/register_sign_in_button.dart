@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/builder_pages/login_builder.dart';
 
+import '../../../generated/l10n.dart';
+
 class RegisterSignInButton extends StatelessWidget {
   /// Blue "Sign in!" button for Register Page with navigator to Login Page.
 
@@ -15,7 +17,7 @@ class RegisterSignInButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => const LoginBuilder()));
       },
       child: Text(
-        ' Sign up!',
+        S.of(context).registerSignIn,
         style:
             Theme.of(context).textTheme.caption?.copyWith(color: Colors.blue),
       ),

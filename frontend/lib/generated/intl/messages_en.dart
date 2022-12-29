@@ -24,16 +24,26 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "activities": MessageLookupByLibrary.simpleMessage("Activities"),
         "analysis": MessageLookupByLibrary.simpleMessage("Analysis"),
+        "createAccountButton":
+            MessageLookupByLibrary.simpleMessage("Create New Account"),
         "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
         "dividends": MessageLookupByLibrary.simpleMessage("Dividends"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("Email"),
+        "hintName": MessageLookupByLibrary.simpleMessage("Name"),
         "hintPassword": MessageLookupByLibrary.simpleMessage("Password"),
         "holdings": MessageLookupByLibrary.simpleMessage("Holdings"),
         "loginButton": MessageLookupByLibrary.simpleMessage("Sign In"),
         "loginGreeting": MessageLookupByLibrary.simpleMessage("Hello There!"),
         "loginSubtext":
             MessageLookupByLibrary.simpleMessage("Nice to see you here!"),
+        "promptAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an Account?"),
         "promptMember": MessageLookupByLibrary.simpleMessage("Not a Member?"),
-        "registerNow": MessageLookupByLibrary.simpleMessage(" Register Now!")
+        "registerGreeting":
+            MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "registerNow": MessageLookupByLibrary.simpleMessage(" Register Now!"),
+        "registerSignIn": MessageLookupByLibrary.simpleMessage("Sign In!"),
+        "registerSubtext": MessageLookupByLibrary.simpleMessage(
+            "Thank you for choosing our services!")
       };
 }

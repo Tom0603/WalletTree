@@ -120,6 +120,66 @@ class S {
     );
   }
 
+  /// `Create New Account`
+  String get createAccountButton {
+    return Intl.message(
+      'Create New Account',
+      name: 'createAccountButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get hintName {
+    return Intl.message(
+      'Name',
+      name: 'hintName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an Account?`
+  String get promptAccount {
+    return Intl.message(
+      'Already have an Account?',
+      name: 'promptAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In!`
+  String get registerSignIn {
+    return Intl.message(
+      'Sign In!',
+      name: 'registerSignIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Account`
+  String get registerGreeting {
+    return Intl.message(
+      'Create New Account',
+      name: 'registerGreeting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thank you for choosing our services!`
+  String get registerSubtext {
+    return Intl.message(
+      'Thank you for choosing our services!',
+      name: 'registerSubtext',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Dashboard`
   String get dashboard {
     return Intl.message(
