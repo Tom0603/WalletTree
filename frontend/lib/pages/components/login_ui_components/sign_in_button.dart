@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
 
+import '../../../generated/l10n.dart';
+
 class SignInButton extends StatelessWidget {
   const SignInButton({Key? key}) : super(key: key);
 
@@ -23,7 +25,7 @@ class SignInButton extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Sign in',
+              S.of(context).loginButton,
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),
