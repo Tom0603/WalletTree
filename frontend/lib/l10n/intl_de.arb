@@ -5,8 +5,8 @@
   "hintEmail": "Email",
   "hintPassword": "Passwort",
 
-  "promptMember": "Kein Mitglied?",
-  "registerNow": " Registriere dich!",
+  "promptMember": "Kein Mitglied? ",
+  "registerNow": "Registriere dich!",
 
   "loginGreeting": "Hallöchen!",
   "loginSubtext": "Schön dich hier zu sehen!",
@@ -19,6 +19,12 @@
   "registerSignIn": "Melde dich an!",
 
   "registerGreeting": "Neues Konto Erstellen",
-  "registerSubtext": "Danke, dass du dich für uns entschieden hast!"
+  "registerSubtext": "Danke, dass du dich für uns entschieden hast!",
 
+
+  "dashboard": "Dashboard",
+  "holdings": "Holdings",
+  "analysis": "Analyse",
+  "activities": "Aktivitäten",
+  "dividends": "Dividenden"
 }
