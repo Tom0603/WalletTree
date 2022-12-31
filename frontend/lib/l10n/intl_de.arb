@@ -9,6 +9,16 @@
   "registerNow": " Registriere dich!",
 
   "loginGreeting": "Hallöchen!",
-  "loginSubtext": "Schön dich hier zu sehen!"
+  "loginSubtext": "Schön dich hier zu sehen!",
+
+
+  "createAccountButton": "Konto Erstellen",
+  "hintName": "Name",
+
+  "promptAccount": "Du hast schon ein Konto? ",
+  "registerSignIn": "Melde dich an!",
+
+  "registerGreeting": "Neues Konto Erstellen",
+  "registerSubtext": "Danke, dass du dich für uns entschieden hast!"
 
 }
