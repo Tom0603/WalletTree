@@ -80,20 +80,20 @@ class S {
     );
   }
 
-  /// `Not a Member?`
+  /// `Not a Member? `
   String get promptMember {
     return Intl.message(
-      'Not a Member?',
+      'Not a Member? ',
       name: 'promptMember',
       desc: '',
       args: [],
     );
   }
 
-  /// ` Register Now!`
+  /// `Register Now!`
   String get registerNow {
     return Intl.message(
-      ' Register Now!',
+      'Register Now!',
       name: 'registerNow',
       desc: '',
       args: [],
@@ -140,10 +140,10 @@ class S {
     );
   }
 
-  /// `Already have an Account?`
+  /// `Already have an Account? `
   String get promptAccount {
     return Intl.message(
-      'Already have an Account?',
+      'Already have an Account? ',
       name: 'promptAccount',
       desc: '',
       args: [],

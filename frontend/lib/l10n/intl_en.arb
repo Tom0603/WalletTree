@@ -5,8 +5,8 @@
   "hintEmail": "Email",
   "hintPassword": "Password",
 
-  "promptMember": "Not a Member?",
-  "registerNow": " Register Now!",
+  "promptMember": "Not a Member? ",
+  "registerNow": "Register Now!",
 
   "loginGreeting": "Hello There!",
   "loginSubtext": "Nice to see you here!",
@@ -15,7 +15,7 @@
   "createAccountButton": "Create New Account",
   "hintName": "Name",
 
-  "promptAccount": "Already have an Account?",
+  "promptAccount": "Already have an Account? ",
   "registerSignIn": "Sign In!",
 
   "registerGreeting": "Create New Account",

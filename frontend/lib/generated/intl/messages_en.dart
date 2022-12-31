@@ -37,11 +37,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginSubtext":
             MessageLookupByLibrary.simpleMessage("Nice to see you here!"),
         "promptAccount":
-            MessageLookupByLibrary.simpleMessage("Already have an Account?"),
-        "promptMember": MessageLookupByLibrary.simpleMessage("Not a Member?"),
+            MessageLookupByLibrary.simpleMessage("Already have an Account? "),
+        "promptMember": MessageLookupByLibrary.simpleMessage("Not a Member? "),
         "registerGreeting":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
-        "registerNow": MessageLookupByLibrary.simpleMessage(" Register Now!"),
+        "registerNow": MessageLookupByLibrary.simpleMessage("Register Now!"),
         "registerSignIn": MessageLookupByLibrary.simpleMessage("Sign In!"),
         "registerSubtext": MessageLookupByLibrary.simpleMessage(
             "Thank you for choosing our services!")

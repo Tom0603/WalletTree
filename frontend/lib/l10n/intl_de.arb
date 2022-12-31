@@ -1,4 +1,14 @@
 {
   "@@locale" : "de",
-  "loginButton":  "Anmelden"
+
+  "loginButton":  "Anmelden",
+  "hintEmail": "Email",
+  "hintPassword": "Passwort",
+
+  "promptMember": "Kein Mitglied?",
+  "registerNow": " Registriere dich!",
+
+  "loginGreeting": "Hallöchen!",
+  "loginSubtext": "Schön dich hier zu sehen!"
+
 }
