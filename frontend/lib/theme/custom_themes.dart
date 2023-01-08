@@ -42,6 +42,12 @@ class CustomAppTheme {
         centerTitle: true,
       ),
 
+      /// Theming for BottomNavigationBar
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: colorBackgroundLight,
+        selectedItemColor: colorPrimaryLight,
+      ),
+
       /// Theming for Icons
       iconTheme: const IconThemeData(color: colorPrimaryLight),
 
@@ -125,6 +131,12 @@ class CustomAppTheme {
       appBarTheme: const AppBarTheme(
         backgroundColor: colorSideBarDark,
         centerTitle: true,
+      ),
+
+      /// Theming for BottomNavigationBar
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: colorBackgroundDark,
+        selectedItemColor: colorPrimaryDark,
       ),
 
       /// Theming for Icons
