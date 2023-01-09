@@ -44,8 +44,32 @@ class CustomAppTheme {
 
       /// Theming for BottomNavigationBar
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         backgroundColor: colorBackgroundLight,
-        selectedItemColor: colorPrimaryLight,
+        selectedItemColor: colorBlack,
+        unselectedItemColor: colorBlack,
+        selectedLabelStyle: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          color: colorPrimaryLight,
+        ),
+        unselectedLabelStyle: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 12,
+          fontWeight: FontWeight.normal,
+          color: colorPrimaryLight,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: colorPrimaryLight,
+          size: 24,
+        ),
+        selectedIconTheme: IconThemeData(
+          color: colorPrimaryLight,
+          size: 28,
+        ),
       ),
 
       /// Theming for Icons
@@ -135,8 +159,32 @@ class CustomAppTheme {
 
       /// Theming for BottomNavigationBar
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         backgroundColor: colorBackgroundDark,
-        selectedItemColor: colorPrimaryDark,
+        selectedItemColor: colorWhite,
+        unselectedItemColor: colorWhite,
+        selectedLabelStyle: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          color: colorWhite,
+        ),
+        unselectedLabelStyle: TextStyle(
+          fontFamily: "Proxima Nova",
+          fontSize: 12,
+          fontWeight: FontWeight.normal,
+          color: colorWhite,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: colorPrimaryDark,
+          size: 24,
+        ),
+        selectedIconTheme: IconThemeData(
+          color: colorPrimaryDark,
+          size: 28,
+        ),
       ),
 
       /// Theming for Icons
