@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../generated/l10n.dart';
 import '../../util/constants.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -15,34 +16,31 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor:
-          Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
-      backgroundColor:
-          Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-      items: const <BottomNavigationBarItem>[
+      /// Note that "Dividends Page" is not available in the Bottom Navigation Bar,
+      /// to make it look less chunky. The page will be included in the
+      /// "Dashboard" page to make the app more compact for mobile users.
+      ///
+      /// ITEMS
+      items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(IconsList.dashboardIcon),
-          label: 'Dashboard',
+          icon: const Icon(IconsList.dashboardIcon),
+          label: S.of(context).dashboard,
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconsList.holdingsIcon),
-          label: 'Holdings',
+          icon: const Icon(IconsList.holdingsIcon),
+          label: S.of(context).holdings,
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconsList.analysisIcon),
-          label: 'Analysis',
+          icon: const Icon(IconsList.analysisIcon),
+          label: S.of(context).analysis,
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconsList.activitiesIcon),
-          label: 'Activities',
+          icon: const Icon(IconsList.activitiesIcon),
+          label: S.of(context).activities,
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconsList.dividendsIcon),
-          label: 'Dividends',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(IconsList.settingsIcon),
-          label: 'Settings',
+          icon: const Icon(IconsList.settingsIcon),
+          label: S.of(context).settings,
         ),
       ],
       currentIndex: _selectedIndex,
