@@ -5,16 +5,19 @@ import 'package:frontend/pages/builder_pages/holdings_builder.dart';
 import 'package:frontend/pages/builder_pages/analysis_builder.dart';
 import 'package:frontend/pages/builder_pages/activities_builder.dart';
 import 'package:frontend/pages/builder_pages/dividends_builder.dart';
+import 'package:frontend/pages/builder_pages/main_page_builder.dart';
 import 'package:frontend/pages/settings_page.dart';
+
+import '../generated/l10n.dart';
 
 /// Includes all the pages for the SideBar/NavBar
 class PageList {
-  static const dashboard = DashboardBuilder();
-  static const holdings = HoldingsBuilder();
-  static const analysis = AnalysisBuilder();
-  static const activities = ActivitiesBuilder();
-  static const dividends = DividendsBuilder();
-  static const settings = SettingsPage();
+  static const dashboard = MainPageBuilder(page: "dashboard");
+  static const holdings = MainPageBuilder(page: "holdings");
+  static const analysis = MainPageBuilder(page: "analysis");
+  static const activities = MainPageBuilder(page: "activities");
+  static const dividends = MainPageBuilder(page: "dividends");
+  static const settings = MainPageBuilder(page: "settings");
 }
 
 /// Includes all the icons for the SideBar/NavBar
