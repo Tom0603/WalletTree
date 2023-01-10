@@ -24,7 +24,7 @@ class MainPageBuilder extends StatelessWidget {
     if (Responsive.isDesktop(context)) {
       return Scaffold(
         body: SafeArea(
-          child: Column(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Expanded(
@@ -44,7 +44,7 @@ class MainPageBuilder extends StatelessWidget {
         drawer: const SideBar(),
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
                 flex: 5,
@@ -66,17 +66,17 @@ class MainPageBuilder extends StatelessWidget {
 
   /// Get the right Page
   getPage(context, page) {
-    if (page == S.of(context).dashboard) {
+    if (page == "dashboard") {
       return getDashboardPage(context);
-    } else if (page == S.of(context).holdings) {
+    } else if (page == "holdings") {
       return getHoldingsPage(context);
-    } else if (page == S.of(context).analysis) {
+    } else if (page == "analysis") {
       return getAnalysisPage(context);
-    } else if (page == S.of(context).activities) {
+    } else if (page == "activities") {
       return getActivitiesPage(context);
-    } else if (page == S.of(context).dividends) {
+    } else if (page == "dividends") {
       return getDividendsPage(context);
-    } else if (page == S.of(context).settings) {
+    } else if (page == "settings") {
       return getSettingsPage(context);
     }
   }

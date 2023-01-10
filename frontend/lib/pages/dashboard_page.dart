@@ -27,7 +27,6 @@ class _DashboardPageState extends State<DashboardPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      bottomNavigationBar: const BottomNavBar(),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }
