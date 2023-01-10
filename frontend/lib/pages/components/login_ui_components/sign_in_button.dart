@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
+
+import 'package:frontend/pages/builder_pages/main_page_builder.dart';
 
 import '../../../generated/l10n.dart';
 
@@ -14,7 +15,8 @@ class SignInButton extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const DashboardBuilder()),
+            MaterialPageRoute(
+                builder: (context) => const MainPageBuilder(page: "dashboard")),
           );
         },
         child: Container(

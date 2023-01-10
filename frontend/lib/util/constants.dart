@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:frontend/pages/builder_pages/dashboard_builder.dart';
-import 'package:frontend/pages/builder_pages/holdings_builder.dart';
-import 'package:frontend/pages/builder_pages/analysis_builder.dart';
-import 'package:frontend/pages/builder_pages/activities_builder.dart';
-import 'package:frontend/pages/builder_pages/dividends_builder.dart';
 import 'package:frontend/pages/builder_pages/main_page_builder.dart';
-import 'package:frontend/pages/settings_page.dart';
-
-import '../generated/l10n.dart';
 
 /// Includes all the pages for the SideBar/NavBar
 class PageList {
