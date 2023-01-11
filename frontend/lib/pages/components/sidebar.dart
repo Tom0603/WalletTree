@@ -46,11 +46,13 @@ class SideBar extends StatelessWidget {
             icon: IconsList.dividendsIcon,
             page: PageList.dividends,
           ),
-          const SizedBox(height: 300),
-          const DrawerListTile(
-              title: "Settings",
-              icon: IconsList.settingsIcon,
-              page: PageList.settings),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 50.0),
+            child: DrawerListTile(
+                title: "Settings",
+                icon: IconsList.settingsIcon,
+                page: PageList.settings),
+          ),
         ],
       ),
     );
