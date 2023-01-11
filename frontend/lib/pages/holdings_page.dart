@@ -12,6 +12,7 @@ class _HoldingsPageState extends State<HoldingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           "Holdings",
           style: Theme.of(context).textTheme.headline5,

@@ -12,6 +12,7 @@ class _DividendsPageState extends State<DividendsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           "Dividends",
           style: Theme.of(context).textTheme.headline5,

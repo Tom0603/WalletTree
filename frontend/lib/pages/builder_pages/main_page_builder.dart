@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:frontend/pages/components/bottomnavbar.dart';
 import 'package:frontend/pages/settings_page.dart';
 
-import '../../generated/l10n.dart';
 import '../../responsive/responsive.dart';
 import '../activities_page.dart';
 import '../analysis_page.dart';
@@ -43,7 +42,7 @@ class MainPageBuilder extends StatelessWidget {
       return Scaffold(
         drawer: const SideBar(),
         body: SafeArea(
-          child: Column(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
