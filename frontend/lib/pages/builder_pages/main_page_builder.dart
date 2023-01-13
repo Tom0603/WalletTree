@@ -40,7 +40,6 @@ class MainPageBuilder extends StatelessWidget {
       );
     } else if (Responsive.isTablet(context)) {
       return Scaffold(
-        drawer: const SideBar(),
         body: SafeArea(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

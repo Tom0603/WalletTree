@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/sidebar.dart';
+
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
@@ -19,7 +21,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
           "Net worth: $netWorth€",
           style: Theme.of(context).textTheme.headline5,
@@ -27,6 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
+      drawer: const SideBar(),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }

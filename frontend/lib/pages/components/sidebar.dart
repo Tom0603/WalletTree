@@ -4,6 +4,8 @@ import 'package:frontend/util/constants.dart';
 
 import 'package:frontend/generated/l10n.dart';
 
+import '../../responsive/responsive.dart';
+
 class SideBar extends StatelessWidget {
   const SideBar({Key? key}) : super(key: key);
 
@@ -14,7 +16,8 @@ class SideBar extends StatelessWidget {
     return Drawer(
       backgroundColor: Theme.of(context).drawerTheme.backgroundColor,
       child: ListView(
-        children: [
+        padding: EdgeInsets.zero,
+        children: <Widget>[
           const DrawerHeader(
             child: Icon(
               Icons.candlestick_chart_outlined,
@@ -46,16 +49,22 @@ class SideBar extends StatelessWidget {
             icon: IconsList.dividendsIcon,
             page: PageList.dividends,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 50.0),
-            child: DrawerListTile(
-                title: "Settings",
-                icon: IconsList.settingsIcon,
-                page: PageList.settings),
-          ),
+          const DrawerListTile(
+              title: "Settings",
+              icon: IconsList.settingsIcon,
+              page: PageList.settings),
         ],
       ),
     );
+  }
+
+  /// Returns boolean value for whether the drawer burger icon should be shown
+  getSidebarIcon(context) {
+    if (Responsive.isTablet(context)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 

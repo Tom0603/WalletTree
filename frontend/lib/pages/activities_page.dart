@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/sidebar.dart';
+
 class ActivitiesPage extends StatefulWidget {
   const ActivitiesPage({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
           "Activities",
           style: Theme.of(context).textTheme.headline5,
@@ -20,6 +22,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
+      drawer: const SideBar(),
     );
   }
 }

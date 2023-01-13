@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/sidebar.dart';
+
 class AnalysisPage extends StatefulWidget {
   const AnalysisPage({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
           "Analysis",
           style: Theme.of(context).textTheme.headline5,
@@ -20,6 +22,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
+      drawer: const SideBar(),
     );
   }
 }
