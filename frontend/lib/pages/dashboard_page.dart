@@ -21,7 +21,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
+        automaticallyImplyLeading: const NewSideBar().getSidebarIcon(context),
         title: Text(
           "Net worth: $netWorth€",
           style: Theme.of(context).textTheme.headline5,
@@ -29,7 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      drawer: const SideBar(),
+      drawer: const NewSideBar(),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     );
   }

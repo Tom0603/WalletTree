@@ -14,7 +14,7 @@ class _DividendsPageState extends State<DividendsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
+        automaticallyImplyLeading: const NewSideBar().getSidebarIcon(context),
         title: Text(
           "Dividends",
           style: Theme.of(context).textTheme.headline5,
@@ -22,7 +22,7 @@ class _DividendsPageState extends State<DividendsPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      drawer: const SideBar(),
+      drawer: const NewSideBar(),
     );
   }
 }

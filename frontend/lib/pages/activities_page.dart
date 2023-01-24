@@ -14,7 +14,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
+        automaticallyImplyLeading: const NewSideBar().getSidebarIcon(context),
         title: Text(
           "Activities",
           style: Theme.of(context).textTheme.headline5,
@@ -22,7 +22,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      drawer: const SideBar(),
+      drawer: const NewSideBar(),
     );
   }
 }

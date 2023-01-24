@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/components/bottomnavbar.dart';
-import 'package:frontend/pages/settings_page.dart';
 
+import 'package:frontend/pages/components/bottomnavbar.dart';
+import '../components/sidebar.dart';
 import '../../responsive/responsive.dart';
 import '../activities_page.dart';
 import '../analysis_page.dart';
-import '../components/sidebar.dart';
 import '../dashboard_page.dart';
 import '../dividends_page.dart';
 import '../holdings_page.dart';
+import 'package:frontend/pages/settings_page.dart';
 
 class MainPageBuilder extends StatelessWidget {
   const MainPageBuilder({
@@ -28,7 +28,7 @@ class MainPageBuilder extends StatelessWidget {
             children: [
               const Expanded(
                 flex: 1,
-                child: SideBar(),
+                child: NewSideBar(),
               ),
               Expanded(
                 flex: 5,
