@@ -29,11 +29,11 @@ class SideBar extends StatelessWidget {
             icon: IconsList.dashboardIcon,
             page: PageList.dashboard,
           ),
-          DrawerListTile(
-            title: localeStrings.holdings,
-            icon: IconsList.holdingsIcon,
-            page: PageList.holdings,
-          ),
+          //DrawerListTile(
+          //  title: localeStrings.holdings,
+          //  icon: IconsList.holdingsIcon,
+          //  page: PageList.holdings,
+          //),
           DrawerListTile(
             title: localeStrings.analysis,
             icon: IconsList.analysisIcon,
@@ -100,5 +100,33 @@ class DrawerListTile extends StatelessWidget {
         style: Theme.of(context).textTheme.subtitle1,
       ),
     );
+  }
+}
+
+class NewSideBar extends StatelessWidget {
+  const NewSideBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+        child: ListView.builder(
+      itemCount: dataList.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(dataList[index].itemLabel),
+          leading: Icon(dataList[index].icon),
+          onTap: () {
+            dataList[index].onTap(context);
+          },
+        );
+      },
+    ));
+  }
+  getSidebarIcon(context) {
+    if (Responsive.isTablet(context)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

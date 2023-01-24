@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../generated/l10n.dart';
 import '../../util/constants.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -11,8 +10,6 @@ class BottomNavBar extends StatefulWidget {
 } // BottomNavBar class
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int _selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -21,36 +18,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
       /// "Dashboard" page to make the app more compact for mobile users.
       ///
       /// ITEMS
-      items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: const Icon(IconsList.dashboardIcon),
-          label: S.of(context).dashboard,
-        ),
-        BottomNavigationBarItem(
-          icon: const Icon(IconsList.holdingsIcon),
-          label: S.of(context).holdings,
-        ),
-        BottomNavigationBarItem(
-          icon: const Icon(IconsList.analysisIcon),
-          label: S.of(context).analysis,
-        ),
-        BottomNavigationBarItem(
-          icon: const Icon(IconsList.activitiesIcon),
-          label: S.of(context).activities,
-        ),
-        BottomNavigationBarItem(
-          icon: const Icon(IconsList.settingsIcon),
-          label: S.of(context).settings,
-        ),
-      ],
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
+      onTap: (index) {
+        dataList[index].onTap(context);
+        setState(() {});
+      },
+      items: dataList
+          .map((e) =>
+              BottomNavigationBarItem(label: e.itemLabel, icon: Icon(e.icon)))
+          .toList(),
     );
   } // build method
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  } // _onItemTapped method
 } // _BottomNavBarState class
