@@ -5,7 +5,8 @@ import 'package:frontend/pages/builder_pages/main_page_builder.dart';
 /// Includes all the pages for the SideBar/NavBar
 class PageList {
   static const dashboard = MainPageBuilder(page: "dashboard");
-  static const holdings = MainPageBuilder(page: "holdings");
+
+  //static const holdings = MainPageBuilder(page: "holdings");
   static const analysis = MainPageBuilder(page: "analysis");
   static const activities = MainPageBuilder(page: "activities");
   static const dividends = MainPageBuilder(page: "dividends");
@@ -21,3 +22,58 @@ class IconsList {
   static const dividendsIcon = Icons.assessment;
   static const settingsIcon = Icons.settings;
 }
+
+class NavDataModel {
+  String itemLabel;
+  IconData icon;
+  Function onTap;
+
+  NavDataModel({
+    required this.itemLabel,
+    required this.icon,
+    required this.onTap,
+  });
+}
+
+List<NavDataModel> dataList = [
+  NavDataModel(
+    itemLabel: "Dashboard",
+    icon: IconsList.dashboardIcon,
+    onTap: (BuildContext context) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PageList.dashboard),
+      );
+    },
+  ),
+  NavDataModel(
+    itemLabel: "Analysis",
+    icon: IconsList.analysisIcon,
+    onTap: (BuildContext context) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PageList.analysis),
+      );
+    },
+  ),
+  NavDataModel(
+    itemLabel: "Activities",
+    icon: IconsList.activitiesIcon,
+    onTap: (BuildContext context) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PageList.activities),
+      );
+    },
+  ),
+  NavDataModel(
+    itemLabel: "Dividends",
+    icon: IconsList.dividendsIcon,
+    onTap: (BuildContext context) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PageList.dividends),
+      );
+    },
+  ),
+];
