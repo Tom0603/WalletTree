@@ -1,6 +1,8 @@
 {
   "@@locale" : "de",
 
+  "settings": "Einstellungen",
+
   "loginButton":  "Anmelden",
   "hintEmail": "Email",
   "hintPassword": "Passwort",

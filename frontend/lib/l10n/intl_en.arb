@@ -1,6 +1,8 @@
 {
   "@@locale": "en",
 
+  "settings": "Settings",
+
   "loginButton": "Sign In",
   "hintEmail": "Email",
   "hintPassword": "Password",

@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerSignIn":
             MessageLookupByLibrary.simpleMessage("Melde dich an!"),
         "registerSubtext": MessageLookupByLibrary.simpleMessage(
-            "Danke, dass du dich für uns entschieden hast!")
+            "Danke, dass du dich für uns entschieden hast!"),
+        "settings": MessageLookupByLibrary.simpleMessage("Einstellungen")
       };
 }

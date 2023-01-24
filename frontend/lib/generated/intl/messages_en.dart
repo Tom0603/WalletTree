@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerNow": MessageLookupByLibrary.simpleMessage("Register Now!"),
         "registerSignIn": MessageLookupByLibrary.simpleMessage("Sign In!"),
         "registerSubtext": MessageLookupByLibrary.simpleMessage(
-            "Thank you for choosing our services!")
+            "Thank you for choosing our services!"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings")
       };
 }
