@@ -109,19 +109,42 @@ class NewSideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        child: ListView.builder(
-      itemCount: dataList.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(dataList[index].itemLabel),
-          leading: Icon(dataList[index].icon),
-          onTap: () {
-            dataList[index].onTap(context);
-          },
-        );
-      },
-    ));
+      backgroundColor: Theme.of(context).drawerTheme.backgroundColor,
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          const DrawerHeader(
+            child: Icon(
+              Icons.candlestick_chart_outlined,
+              size: 100,
+            ),
+          ),
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 1000),
+            child: ListView.builder(
+              itemCount: dataList.length,
+              itemBuilder: (BuildContext context, index) {
+                return ListTile(
+                  horizontalTitleGap: 0.5,
+                  title: Text(dataList[index].itemLabel,
+                      style: Theme.of(context).textTheme.subtitle1),
+                  leading: Icon(
+                    dataList[index].icon,
+                    color: Theme.of(context).iconTheme.color,
+                    size: 30.0,
+                  ),
+                  onTap: () {
+                    dataList[index].onTap(context);
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
+
   getSidebarIcon(context) {
     if (Responsive.isTablet(context)) {
       return true;
