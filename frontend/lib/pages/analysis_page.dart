@@ -14,7 +14,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: const NewSideBar().getSidebarIcon(context),
+        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
           "Analysis",
           style: Theme.of(context).textTheme.headline5,
@@ -22,7 +22,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      drawer: const NewSideBar(),
+      drawer: const SideBar(),
     );
   }
 }

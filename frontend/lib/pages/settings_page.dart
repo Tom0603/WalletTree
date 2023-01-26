@@ -14,7 +14,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: const NewSideBar().getSidebarIcon(context),
+        automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
           "Settings",
           style: Theme.of(context).textTheme.headline5,
@@ -22,7 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
         centerTitle: true,
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
       ),
-      drawer: const NewSideBar(),
+      drawer: const SideBar(),
     );
   }
 }

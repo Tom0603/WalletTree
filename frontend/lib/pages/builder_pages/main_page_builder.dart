@@ -28,7 +28,7 @@ class MainPageBuilder extends StatelessWidget {
             children: [
               const Expanded(
                 flex: 1,
-                child: NewSideBar(),
+                child: SideBar(),
               ),
               Expanded(
                 flex: 5,
