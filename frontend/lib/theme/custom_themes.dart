@@ -17,10 +17,12 @@ const colorSideBarLight = Colors.white54;
 /// Color constants for Dark Theme
 //const colorPrimaryDark = Colors.cyanAccent;
 const colorPrimaryDark = Colors.deepPurple;
-const colorBackgroundDark = Color.fromARGB(255, 15, 15, 15);
+//const colorBackgroundDark = Color.fromARGB(255, 15, 15, 15);
+const colorBackgroundDark = Color.fromARGB(255, 38, 37, 69);
 const colorShadowDark = Colors.black12;
 const colorNavBarDark = Colors.black;
-const colorSideBarDark = Color.fromARGB(255, 25, 25, 25);
+//const colorSideBarDark = Color.fromARGB(255, 25, 25, 25);
+const colorSideBarDark = Color.fromARGB(255, 30, 30, 55);
 
 /// Contains all the theming for LightTheme
 class CustomAppTheme {
@@ -220,7 +222,7 @@ class CustomAppTheme {
           fontFamily: "Proxima  Nova",
           fontSize: 24,
           fontWeight: FontWeight.bold,
-          color: colorPrimaryDark,
+          color: colorWhite,
         ),
         headline6: TextStyle(
           fontFamily: "Proxima Nova",
