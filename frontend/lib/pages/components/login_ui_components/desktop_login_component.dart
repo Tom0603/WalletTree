@@ -6,6 +6,8 @@ import 'package:frontend/pages/components/login_ui_components/prompt_member_comp
 import 'package:frontend/pages/components/login_ui_components/register_now_button.dart';
 import 'package:frontend/pages/components/login_ui_components/sign_in_button.dart';
 
+/// This class is the component containing the [EmailInputField], [PasswordInputField], [SignInButton],
+/// and the "Not a member?" prompt [PromptMember] and [RegisterNowButton] for the desktop login page.
 class DesktopLoginSidePart extends StatefulWidget {
   const DesktopLoginSidePart({Key? key}) : super(key: key);
 

@@ -11,6 +11,7 @@ class SideBar extends StatelessWidget {
     return Drawer(
       backgroundColor: Theme.of(context).drawerTheme.backgroundColor,
       child: ListView(
+        /// Makes SideBar fixed and not scrollable
         physics: const NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
         children: <Widget>[
@@ -25,6 +26,8 @@ class SideBar extends StatelessWidget {
             child: ListView.builder(
               itemCount: dataList.length,
               itemBuilder: (BuildContext context, index) {
+                /// The ListTile() widget is responsible for building the items for the SideBar.
+                /// It calls the attributes created in the dataList
                 return ListTile(
                   horizontalTitleGap: 0.5,
                   title: Text(dataList[index].itemLabel,
@@ -34,6 +37,8 @@ class SideBar extends StatelessWidget {
                     color: Theme.of(context).iconTheme.color,
                     size: 30.0,
                   ),
+
+                  /// Calls the onTap() function of the wanted item in dataList
                   onTap: () {
                     dataList[index].onTap(context);
                   },

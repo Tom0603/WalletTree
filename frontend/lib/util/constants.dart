@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:frontend/pages/builder_pages/main_page_builder.dart';
+import 'package:frontend/pages/components/bottomnavbar.dart';
+import 'package:frontend/pages/components/sidebar.dart';
 
 /// Includes all the pages for the SideBar/NavBar
 class PageList {
@@ -23,6 +25,11 @@ class IconsList {
   static const settingsIcon = Icons.settings;
 }
 
+/// This class [NavDataModel] if the parent class of the [dataList].
+/// The [dataList] is the data model holding the essential information for
+/// building the [SideBar] and the [BottomNavBar].
+/// It contains information regarding the itemLabel, icon and the onTap() function.
+/// The onTap() function navigates to desired page.
 class NavDataModel {
   String itemLabel;
   IconData icon;

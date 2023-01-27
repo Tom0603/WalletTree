@@ -8,6 +8,8 @@ import 'package:frontend/pages/components/register_ui_components/register_sign_i
 
 import '../../../generated/l10n.dart';
 
+/// This class is the component containing the [NameInputField], [EmailRegisterField], [PasswordRegisterField], [CreateAccountButton],
+/// and the "Already a member?" prompt and [RegisterSignInButton] for the desktop login page.
 class DesktopRegisterSidePart extends StatefulWidget {
   const DesktopRegisterSidePart({Key? key}) : super(key: key);
 
@@ -65,7 +67,7 @@ class _DesktopRegisterSidePartState extends State<DesktopRegisterSidePart> {
 
                 const SizedBox(height: 20),
 
-                /// Not a member?
+                /// Already a member?
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

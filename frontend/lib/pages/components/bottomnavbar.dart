@@ -13,15 +13,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      /// Note that "Dividends Page" is not available in the Bottom Navigation Bar,
-      /// to make it look less chunky. The page will be included in the
-      /// "Dashboard" page to make the app more compact for mobile users.
-      ///
-      /// ITEMS
+      /// Calls the onTap() function of wanted item of dataList
       onTap: (index) {
         dataList[index].onTap(context);
         setState(() {});
       },
+
+      /// Get items from dataList to build the navigation bar
       items: dataList
           .map((e) =>
               BottomNavigationBarItem(label: e.itemLabel, icon: Icon(e.icon)))

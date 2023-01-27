@@ -14,6 +14,7 @@ class RegisterBuilder extends StatelessWidget {
     return getRegisterScreen(context);
   }
 
+  /// Checks for the right device/screen size and returns the associated register page
   getRegisterScreen(context) {
     if (Responsive.isMobile(context)) {
       return const MobileRegister();

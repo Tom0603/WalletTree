@@ -13,6 +13,7 @@ class LoginBuilder extends StatelessWidget {
     return getLoginScreen(context);
   }
 
+  /// Checks for the right device/screen size and returns the associated login page
   getLoginScreen(context) {
     if (Responsive.isMobile(context)) {
       return const MobileLogin();

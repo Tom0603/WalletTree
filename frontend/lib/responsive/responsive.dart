@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// The [Responsive] class checks the screen size of the used device using the [MediaQuery.of] function.
+/// It returns either [isMobile], [isTablet] or [isDesktop] boolean.
 class Responsive extends StatelessWidget {
   final Widget mobile;
   final Widget? tablet;

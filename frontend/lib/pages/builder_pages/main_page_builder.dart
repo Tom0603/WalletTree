@@ -10,6 +10,10 @@ import '../dividends_page.dart';
 import '../holdings_page.dart';
 import 'package:frontend/pages/settings_page.dart';
 
+/// This is the main class for building pages.
+/// [MainPageBuilder] checks for the used device/screen size with help of [Responsive]
+/// It then returns a scaffold consisting of the navigation elements like [SideBar] or
+/// [BottomNavBar], and the wanted page using the [getPage] function
 class MainPageBuilder extends StatelessWidget {
   const MainPageBuilder({
     Key? key,
@@ -78,6 +82,8 @@ class MainPageBuilder extends StatelessWidget {
       return getSettingsPage(context);
     }
   }
+
+  /// Functions for returning the right page
 
   getDashboardPage(context) {
     return const DashboardPage();
