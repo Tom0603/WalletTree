@@ -11,6 +11,7 @@ class SideBar extends StatelessWidget {
     return Drawer(
       backgroundColor: Theme.of(context).drawerTheme.backgroundColor,
       child: ListView(
+        physics: const NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
         children: <Widget>[
           const DrawerHeader(
