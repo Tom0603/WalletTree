@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginGreeting": MessageLookupByLibrary.simpleMessage("Hallöchen!"),
         "loginSubtext":
             MessageLookupByLibrary.simpleMessage("Schön dich hier zu sehen!"),
+        "portfolioValue":
+            MessageLookupByLibrary.simpleMessage("Portfolio Wert"),
         "promptAccount":
             MessageLookupByLibrary.simpleMessage("Du hast schon ein Konto? "),
         "promptMember": MessageLookupByLibrary.simpleMessage("Kein Mitglied? "),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
 import 'components/sidebar.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _DashboardPageState extends State<DashboardPage> {
       appBar: AppBar(
         automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
-          "Net worth: $portfolioValue€",
+          "${S.of(context).portfolioValue}: $portfolioValue€",
           style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,

@@ -28,5 +28,7 @@
   "holdings": "Holdings",
   "analysis": "Analysis",
   "activities": "Activities",
-  "dividends": "Dividends"
+  "dividends": "Dividends",
+
+  "portfolioValue": "Portfolio Value"
 }

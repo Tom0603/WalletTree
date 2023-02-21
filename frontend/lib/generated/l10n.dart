@@ -239,6 +239,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Portfolio Value`
+  String get portfolioValue {
+    return Intl.message(
+      'Portfolio Value',
+      name: 'portfolioValue',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
