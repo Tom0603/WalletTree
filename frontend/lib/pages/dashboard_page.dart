@@ -15,7 +15,7 @@ class _DashboardPageState extends State<DashboardPage> {
   final verticalPadding = 40.0;
 
   // App Bar value
-  double netWorth = 174.839;
+  double portfolioValue = 123.456;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class _DashboardPageState extends State<DashboardPage> {
       appBar: AppBar(
         automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
-          "Net worth: $netWorth€",
+          "Net worth: $portfolioValue€",
           style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,
