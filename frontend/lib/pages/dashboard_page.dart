@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../generated/l10n.dart';
 import 'components/sidebar.dart';
 
+import 'package:frontend/util/communication_handler.dart';
+
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
 
@@ -11,6 +13,8 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  final OrdersHandler ordersHandler = OrdersHandler();
+
   // Padding constants
   final horizontalPadding = 40.0;
   final verticalPadding = 40.0;
@@ -32,6 +36,46 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       drawer: const SideBar(),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      body: Center(
+        child: SafeArea(
+          child: FutureBuilder(
+            future: ordersHandler.fetchOrders(),
+            builder: (BuildContext context, AsyncSnapshot snapshot) {
+              if (snapshot.hasData) {
+                return Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        child: Card(
+                          color: Theme.of(context).backgroundColor,
+                          child: ListView.builder(
+                            itemCount: snapshot.data.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              var currentOrder = snapshot.data[index];
+
+                              return ListTile(
+                                title: Text(currentOrder.ticker),
+                                leading:
+                                    const Icon(Icons.account_balance_wallet),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                );
+              } else if (snapshot.hasError) {
+                return Text(
+                  "${snapshot.error}",
+                  style: const TextStyle(color: Colors.red),
+                );
+              }
+              return const CircularProgressIndicator();
+            },
+          ),
+        ),
+      ),
     );
   }
 }
