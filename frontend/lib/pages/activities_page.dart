@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
 import 'components/sidebar.dart';
 import 'package:frontend/util/communication_handler.dart';
 
@@ -20,7 +21,7 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
       appBar: AppBar(
         automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
-          "Activities",
+          S.of(context).activities,
           style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,
@@ -68,6 +69,8 @@ class _ActivitiesPageState extends State<ActivitiesPage> {
                   style: const TextStyle(color: Colors.red),
                 );
               }
+
+              /// Return progress indicator while waiting for data
               return const CircularProgressIndicator();
             },
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
 import 'components/sidebar.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
-          "Settings",
+          S.of(context).settings,
           style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,

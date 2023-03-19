@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
 import 'components/sidebar.dart';
 
 class AnalysisPage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
       appBar: AppBar(
         automaticallyImplyLeading: const SideBar().getSidebarIcon(context),
         title: Text(
-          "Analysis",
+          S.of(context).analysis,
           style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: true,

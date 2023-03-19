@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'package:frontend/models/orders.dart';
 import 'package:http/http.dart' as http;
 
-const String urlPrefix = "http://127.0.0.1:8000/orderdetails";
+const String orderURL = "http://127.0.0.1:8000/orderdetails";
 
 class OrdersHandler {
   Future<List<Orders>> fetchOrders() async {
     /// FOR DEBUG PURPOSES
     print("fetching");
 
-    http.Response response = await http.get(Uri.parse(urlPrefix));
+    http.Response response = await http.get(Uri.parse(orderURL));
 
     if (response.statusCode != 200) {
       /// FOR DEBUG PURPOSES
