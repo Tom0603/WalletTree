@@ -45,21 +45,21 @@ class _DashboardPageState extends State<DashboardPage> {
                 return Row(
                   children: <Widget>[
                     Expanded(
-                      child: Container(
-                        child: Card(
-                          color: Theme.of(context).backgroundColor,
-                          child: ListView.builder(
-                            itemCount: snapshot.data.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              var currentOrder = snapshot.data[index];
+                      child: Card(
+                        color: Theme.of(context).scaffoldBackgroundColor,
+                        child: ListView.builder(
+                          itemCount: snapshot.data.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            var currentOrder = snapshot.data[index];
 
-                              return ListTile(
-                                title: Text(currentOrder.ticker),
-                                leading:
-                                    const Icon(Icons.account_balance_wallet),
-                              );
-                            },
-                          ),
+                            return ListTile(
+                              title: Text(currentOrder.ticker),
+                              leading:
+                                   Icon(Icons.account_balance_wallet, color: Theme.of(context).iconTheme.color,),
+                              subtitle: Text("Buy in: ${currentOrder.price}, Number of shares: ${currentOrder.shares}"),
+                              trailing: Text(currentOrder.userEmail, style: Theme.of(context).textTheme.caption,),
+                            );
+                          },
                         ),
                       ),
                     )
