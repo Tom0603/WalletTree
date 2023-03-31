@@ -6,6 +6,12 @@ import 'package:http/http.dart' as http;
 const String orderURL = "http://127.0.0.1:8000/orderdetails";
 
 class OrdersHandler {
+  /// List containing the users orders
+  final List<Orders> _orders = [];
+  List<Orders> get orders {
+    return [..._orders];
+  }
+
   Future<List<Orders>> fetchOrders() async {
     /// FOR DEBUG PURPOSES
     print("fetching");
@@ -22,11 +28,26 @@ class OrdersHandler {
       print("Success");
 
       List<dynamic> jsonResponse = jsonDecode(response.body);
-      List<Orders> orders = [];
       jsonResponse.map((json) {
-        orders.add(Orders.fromJson(json));
+        _orders.add(Orders.fromJson(json));
       }).toList();
-      return orders;
+      return _orders;
     }
   }
+
+
+  Future<Orders> addOrders(String ticker) async {
+    http.Response response = await http.post(Uri.parse(orderURL), headers: {"Content-Type": "application/json"}, body: jsonEncode(ticker));
+
+    if (response.statusCode != 201) {
+      /// FOR DEBUG PURPOSES
+      print("Exception");
+      throw Exception("Error creating an order: ${response.statusCode}");
+    } else {
+      return Orders.fromJson(jsonDecode(response.body));
+    }
+  }
+
+
+
 }
