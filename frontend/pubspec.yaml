@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   fl_chart: ^0.55.2
   http: ^0.13.5
+  yahoofin: ^0.0.8
 
 
 dev_dependencies:
