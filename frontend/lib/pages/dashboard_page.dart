@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/pages/components/chart_card.dart';
 
 import '../generated/l10n.dart';
 import 'components/sidebar.dart';
@@ -32,6 +33,10 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       drawer: const SideBar(),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
+        child: ChartCard(),
+      ),
     );
   }
 }

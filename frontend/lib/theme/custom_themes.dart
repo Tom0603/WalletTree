@@ -77,6 +77,9 @@ class CustomAppTheme {
       /// Theming for Icons
       iconTheme: const IconThemeData(color: colorPrimaryLight),
 
+      /// Theming for Cards
+      cardColor: colorSideBarLight,
+
       /// Theming for Text
       textTheme: const TextTheme(
         headline1: TextStyle(
@@ -191,6 +194,9 @@ class CustomAppTheme {
 
       /// Theming for Icons
       iconTheme: const IconThemeData(color: colorPrimaryDark),
+
+      /// Theming for Cards
+      cardColor: colorSideBarDark,
 
       /// Theming for Text
       textTheme: const TextTheme(
