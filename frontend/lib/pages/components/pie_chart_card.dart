@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/components/line_chart.dart';
+import 'package:frontend/pages/components/pie_chart.dart';
 
-class ChartCard extends StatelessWidget {
-  const ChartCard({Key? key}) : super(key: key);
+class PieChartCard extends StatelessWidget {
+  const PieChartCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ChartCard extends StatelessWidget {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         elevation: 5.0,
         margin: const EdgeInsets.all(10.0),
-        child: const LineChart(),
+        child: PieChart(),
       ),
     );
   }
