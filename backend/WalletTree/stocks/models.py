@@ -1,9 +1,12 @@
 from django.db import models
-from users.models import User
+from django.conf import settings
+from users.models import CustomUser
 
 
 class Orders(models.Model):
-    user_email = models.ForeignKey(User, on_delete=models.CASCADE)
+    # Foreign key to get user_email from CustomUser model
+    user_email = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
     timestamp = models.DateTimeField(auto_now_add=True)
     ticker = models.CharField(max_length=20)
     stock_name = models.CharField(max_length=50)

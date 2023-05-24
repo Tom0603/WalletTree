@@ -19,7 +19,7 @@ from stocks import views
 from rest_framework import routers
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register("orderdetails", views.Orders)
+router.register("orderdetails", views.OrderView)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
