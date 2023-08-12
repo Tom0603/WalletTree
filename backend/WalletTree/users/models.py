@@ -8,37 +8,44 @@ class UserManager(BaseUserManager):
     Custom User model manager
     """
 
-    def create_user(self, email, password, **kwargs):
+    def create_user(self, email, username, password, **kwargs):
         """
         Create and save a User with the given email and password
         """
+
         if not email:
-            raise ValueError("The Email must be set")
+            raise ValueError("The Email must be set.")
+
+        if not username:
+            raise ValueError("The Username must be set.")
 
         email = self.normalize_email(email)
-        user = self.model(email=email, **kwargs)
+        user = self.model(email=email, username=username, **kwargs)
         user.set_password(password)
         user.save()
         return user
 
-    def create_superuser(self, email, password, **kwargs):
+    def create_superuser(self, email, username, password, **kwargs):
         """
         Create and save a Superuser with the given email and password
         """
 
         user = self.create_user(
             email,
+            username,
             password=password,
             **kwargs
         )
         user.is_admin = True
-        is_superuser = True
         user.save(using=self._db)
         return user
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, max_length=255)
+    username = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
+
     date_joined = models.DateTimeField(auto_now_add=True)
 
     # Users permissions
@@ -46,7 +53,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ["username"]
 
     objects = UserManager()
 

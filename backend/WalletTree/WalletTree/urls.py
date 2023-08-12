@@ -23,5 +23,6 @@ router.register("orderdetails", views.OrderView)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include(router.urls))
+    path("", include(router.urls)),
+    path("api/", include("users.urls"))
 ]

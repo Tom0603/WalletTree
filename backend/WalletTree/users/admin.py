@@ -11,10 +11,10 @@ class UserAdmin(BaseUserAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
 
-    list_display = ["email", "is_admin", "is_active"]
-    list_filter = ["email", "is_admin", "is_active"]
+    list_display = ["email", "username", "is_admin", "is_active"]
+    list_filter = ["email", "username", "is_admin", "is_active"]
     fieldsets = [
-        (None, {"fields": ["email", "password"]}),
+        (None, {"fields": ["email", "username", "password"]}),
         ("Permissions", {"fields": ["is_admin"]}),
     ]
 
@@ -23,11 +23,11 @@ class UserAdmin(BaseUserAdmin):
             None,
             {
                 "classes": ["wide"],
-                "fields": ["email", "password1", "password2"],
+                "fields": ["email", "username", "password1", "password2"],
             },
         ),
     ]
-    search_fields = ["email"]
+    search_fields = ["email", "username"]
     ordering = ["email"]
     filter_horizontal = []
 

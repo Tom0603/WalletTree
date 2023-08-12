@@ -17,7 +17,7 @@ class OrdersHandler {
   Future<List<Orders>> fetchOrders() async {
     /// FOR DEBUG PURPOSES
     if (kDebugMode) {
-      print("fetching");
+      print("fetching orders");
     }
 
     http.Response response = await http.get(Uri.parse(orderURL));
@@ -25,7 +25,7 @@ class OrdersHandler {
     if (response.statusCode != 200) {
       /// FOR DEBUG PURPOSES
       if (kDebugMode) {
-        print("Exception");
+        print("Exception ORDER");
       }
 
       throw Exception("Error, ${response.statusCode}");

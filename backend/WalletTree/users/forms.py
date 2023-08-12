@@ -13,12 +13,12 @@ class UserCreationForm(forms.ModelForm):
 
     password1 = forms.CharField(label="Password", widget=forms.PasswordInput)
     password2 = forms.CharField(
-        label="Password confirmation", widget=forms.PasswordInput
+        label="Password Confirmation", widget=forms.PasswordInput
     )
 
     class Meta:
         model = CustomUser
-        fields = ["email"]
+        fields = ["email", "username"]
 
     def clean_password2(self):
         # Check that the two password entries match
@@ -48,4 +48,4 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = CustomUser
-        fields = ["email", "password", "is_active", "is_admin"]
+        fields = ["email", "username", "password", "is_active", "is_admin"]
